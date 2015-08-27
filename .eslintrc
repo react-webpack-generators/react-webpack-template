@@ -1,0 +1,26 @@
+{
+  "plugins": [
+    "react"
+  ],
+  "ecmaFeatures": {
+    "jsx": true,
+    "modules": true
+  },
+  "env": {
+    "browser": true,
+    "amd": true,
+    "es6": true
+  },
+  "rules": {
+    "quotes": [ 1, "single" ],
+    "no-undef": false,
+    "global-strict": false,
+    "no-extra-semi": 1,
+    "no-underscore-dangle": false,
+    "no-console": 1,
+    "no-unused-vars": 1,
+    "no-trailing-spaces": [1, { "skipBlankLines": true }],
+    "no-unreachable": 1,
+    "no-alert": false
+  }
+}

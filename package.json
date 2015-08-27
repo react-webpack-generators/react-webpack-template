@@ -1,0 +1,29 @@
+{
+  "name": "react-webpack-template",
+  "version": "0.0.1",
+  "description": "Base template for react and webpack",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://weblogixx@github.com/weblogixx/react-webpack-template.git"
+  },
+  "keywords": [
+    "React",
+    "Webpack",
+    "Babel"
+  ],
+  "author": "Christian Schilling (cs@weblogixx.de)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/weblogixx/react-webpack-template/issues"
+  },
+  "homepage": "https://github.com/weblogixx/react-webpack-template#readme",
+  "devDependencies": {
+    "webpack": "^1.12.0",
+    "webpack-dev-server": "^1.10.1"
+  }
+}
