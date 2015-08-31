@@ -7,7 +7,7 @@ The following features are planned to be included in the final version:
 
 - [x] Webpack and Webpack-Dev-Server, including hot-loader
 - [x] Babel and JSX
-- [ ] Mocha Unit tests (*optional*)
+- [x] Mocha Unit tests (*optional*)
 - [ ] React.Router
 - [x] EsLint Support
 - [x] No dependency on grunt, gulp or the next hot taskrunner!
@@ -31,6 +31,9 @@ npm run dist
 
 # Run unit tests
 npm test
+
+# Lint all files in src (also automatically done AFTER tests are run)
+npm run lint
 ```
 
 You can also use your globally installed version of webpack like this:

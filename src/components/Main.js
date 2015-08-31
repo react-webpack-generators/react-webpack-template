@@ -6,7 +6,7 @@ import React from 'react/addons';
 class AppComponent extends React.Component {
   render() {
     return (
-      <div>
+      <div className="index">
         Content
       </div>
     );
