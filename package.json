@@ -1,16 +1,15 @@
 {
   "name": "react-webpack-template",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Base template for react and webpack",
   "main": "index.js",
-  "private": true,
   "scripts": {
     "start": "node server.js --env=dev",
     "test": "karma start",
     "posttest": "npm run lint",
     "serve": "node server.js --env=dev",
     "servedist": "node server.js --env=dist",
-    "dist": "webpack",
+    "dist": "webpack --env=dist",
     "lint": "eslint ./src"
   },
   "repository": {
