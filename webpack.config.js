@@ -11,7 +11,7 @@ var config = {
   port: port,
   debug: true,
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'dist/assets'),
     filename: 'app.js',
     publicPath: publicPath
   },

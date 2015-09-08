@@ -12,6 +12,10 @@ The following features are planned to be included in the final version:
 - [x] EsLint Support
 - [x] No dependency on grunt, gulp or the next hot taskrunner!
 
+## Todo
+- [ ] The dynamic webpack configuration is clunky, there must be a better way to do that!
+- [ ] Karmas webpack configuration is not included in the global webpack.config.js file, but it really should
+
 ## What is it for?
 This template can be used directly for the creation of new projects.
 Also it will be the "template" for the next version of generator-react-webpack.
@@ -24,9 +28,9 @@ npm start # or
 npm run serve
 
 # Start the dev-server with the dist version
-npm run servedist
+npm run serve:dist
 
-# Just build the dist version
+# Just build the dist version and copy static files
 npm run dist
 
 # Run unit tests
@@ -34,6 +38,12 @@ npm test
 
 # Lint all files in src (also automatically done AFTER tests are run)
 npm run lint
+
+# Clean up the dist directory
+npm run clean
+
+# Just copy the static assets
+npm run copy
 ```
 
 You can also use your globally installed version of webpack like this:
