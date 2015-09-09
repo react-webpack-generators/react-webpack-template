@@ -8,11 +8,11 @@ The following features are planned to be included in the final version:
 - [x] Webpack and Webpack-Dev-Server, including hot-loader
 - [x] Babel and JSX
 - [x] Mocha Unit tests (*optional*)
-- [ ] React.Router
 - [x] EsLint Support
 - [x] No dependency on grunt, gulp or the next hot taskrunner!
 
 ## Todo
+- [ ] Better performance for webpack builds
 - [ ] The dynamic webpack configuration is clunky, there must be a better way to do that!
 - [ ] Karmas webpack configuration is not included in the global webpack.config.js file, but it really should
 

@@ -23,7 +23,7 @@ module.exports = function(config) {
     },
     webpack: {
       cache: true,
-      devtool: 'inline-source-map',
+      devtool: 'eval',
       module: {
         loaders: [
           {
@@ -33,7 +33,10 @@ module.exports = function(config) {
           {
             test: /\.(js|jsx)$/,
             loader: 'babel-loader',
-            exclude: /node_modules/
+            include: [
+              path.join(__dirname, 'src'),
+              path.join(__dirname, 'test')
+            ]
           }
         ]
       },

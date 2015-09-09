@@ -37,7 +37,7 @@ var config = {
     preLoaders: [
       {
         test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
+        include: path.join(__dirname, 'src'),
         loader: 'eslint-loader'
       }
     ],
@@ -59,7 +59,7 @@ switch(env) {
   case 'dist':
     config.entry = './src/components/run';
     config.cache = false;
-    config.devtool = false;
+    config.devtool = 'sourcemap';
     config.plugins = [
       new webpack.optimize.DedupePlugin(),
       new webpack.optimize.UglifyJsPlugin(),
@@ -83,7 +83,7 @@ switch(env) {
       './src/components/run'
     ];
     config.cache = true;
-    config.devtool = 'sourcemap';
+    config.devtool = 'eval';
     config.plugins = [
       new webpack.HotModuleReplacementPlugin(),
       new webpack.NoErrorsPlugin()
