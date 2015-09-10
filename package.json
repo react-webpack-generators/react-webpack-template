@@ -11,7 +11,7 @@
     "serve:dist": "node server.js --env=dist",
     "dist": "npm run copy & webpack --env=dist",
     "lint": "eslint ./src",
-    "copy": "copyfiles -f ./src/index.html ./dist",
+    "copy": "copyfiles -f ./src/index.html ./src/favicon.ico ./dist",
     "clean": "rimraf dist/*"
   },
   "repository": {
