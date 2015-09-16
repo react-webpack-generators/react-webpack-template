@@ -27,7 +27,7 @@ module.exports = function(config) {
       module: {
         loaders: [
           {
-            test: /\.(css|png|jpg|gif|woff|woff2)$/,
+            test: /\.(png|jpg|gif|woff|woff2|css|sass|scss|less|styl)$/,
             loader: 'null-loader'
           },
           {
