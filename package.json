@@ -2,7 +2,7 @@
   "name": "react-webpack-template",
   "version": "0.0.10",
   "description": "A base skeleton template for react and webpack without task runners",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js --env=dev",
     "test": "karma start",
@@ -13,7 +13,9 @@
     "lint": "eslint ./src",
     "copy": "copyfiles -f ./src/index.html ./src/favicon.ico ./dist",
     "clean": "rimraf dist/*",
-    "patch-release": "npm version patch && npm publish && git push --follow-tags"
+    "release:major": "npm version major && npm publish && git push --follow-tags",
+    "release:minor": "npm version minor && npm publish && git push --follow-tags",
+    "release:patch": "npm version patch && npm publish && git push --follow-tags"
   },
   "repository": {
     "type": "git",
@@ -63,6 +65,7 @@
     "webpack-dev-server": "^1.10.1"
   },
   "dependencies": {
+    "lodash": "^3.10.1",
     "normalize.css": "^3.0.3",
     "react": "^0.13.3"
   }

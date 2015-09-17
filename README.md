@@ -10,11 +10,11 @@ The following features are planned to be included in the final version:
 - [x] Mocha Unit tests (*optional*)
 - [x] EsLint Support
 - [x] No dependency on grunt, gulp or the next hot taskrunner!
+- [x] The dynamic webpack configuration is clunky, there must be a better way to do that!
+- [x] Karmas webpack configuration is not included in the global webpack.config.js file, but it really should
 
 ## Todo
 - [ ] Better performance for webpack builds
-- [ ] The dynamic webpack configuration is clunky, there must be a better way to do that!
-- [ ] Karmas webpack configuration is not included in the global webpack.config.js file, but it really should
 
 ## What is it for?
 This template can be used directly for the creation of new projects.
