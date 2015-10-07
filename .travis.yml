@@ -1,0 +1,6 @@
+language: node_js
+node_js:
+  - '4.1.0'
+before_install:
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'react-webpack-template' ]; then cd .. && eval "mv $currentfolder react-webpack-template" && cd react-webpack-template; fi
