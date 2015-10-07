@@ -1,6 +1,8 @@
 # Welcome to react-webpack-template
-This repository holds a base template for the new version of generator-react-webpack.
+> This repository holds a base template for the new version of generator-react-webpack.
 It can be understood as the prototype for newly generated projects.
+
+[![Build Status](https://travis-ci.org/weblogixx/react-webpack-template.svg)](https://travis-ci.org/weblogixx/react-webpack-template)
 
 ## Features
 The following features are planned to be included in the final version:
