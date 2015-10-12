@@ -18,6 +18,6 @@ describe('MainComponent', () => {
     });
 
     it('should have its component name as default className', () => {
-      expect(MainComponent._store.props.className).to.equal('index');
+      expect(MainComponent.props.className).to.equal('index');
     });
 });

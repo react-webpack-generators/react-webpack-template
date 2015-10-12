@@ -1,0 +1,9 @@
+# react-webpack-template - Changelog
+
+## 0.2.0:
+___Upgrades:___
+1. Updated React from 0.13 to 0.14 (using ```^0.14```) as version string. This included minor code changes for components (now use the splitted "React"-Package) and the runner (Using React-DOM).
+2. Updated the shallow renderer for unit tests.
+
+___Backwards incompatible changes:___
+1. Default unit tests do not need to traverse down to `Component._store.props`, but directly to `Component.props`. Please keep this in mind when using properties in your tests.
