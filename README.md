@@ -14,6 +14,7 @@ The following features are planned to be included in the final version:
 - [x] No dependency on grunt, gulp or the next hot taskrunner!
 - [x] The dynamic webpack configuration is clunky, there must be a better way to do that!
 - [x] Karmas webpack configuration is not included in the global webpack.config.js file, but it really should
+- [x] Support for environment-specific configuration files
 
 ## Todo
 - [ ] Better performance for webpack builds
@@ -71,3 +72,4 @@ react-webpack-template is available under MIT-License and can therefore be used 
 ## Contributors
 - Weblogixx (cs@weblogixx.de)
 - Martin Jul (martin@mjul.com)
+- Stephan Herzog (sthzgvie@gmail.com)
