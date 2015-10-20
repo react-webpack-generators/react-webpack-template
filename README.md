@@ -38,6 +38,9 @@ npm run dist
 # Run unit tests
 npm test
 
+# Run the unit tests continuously (repeat the test when code changes are saved)
+npm run test:watch
+
 # Lint all files in src (also automatically done AFTER tests are run)
 npm run lint
 
@@ -67,3 +70,4 @@ react-webpack-template is available under MIT-License and can therefore be used 
 
 ## Contributors
 - Weblogixx (cs@weblogixx.de)
+- Martin Jul (martin@mjul.com)
