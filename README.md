@@ -5,26 +5,25 @@ It can be understood as the prototype for newly generated projects.
 [![Build Status](https://travis-ci.org/weblogixx/react-webpack-template.svg)](https://travis-ci.org/weblogixx/react-webpack-template)
 
 ## Features
-The following features are planned to be included in the final version:
+The following features are currently included:
 
 - [x] Webpack and Webpack-Dev-Server, including hot-loader
 - [x] Babel and JSX
 - [x] Mocha Unit tests (*optional*)
 - [x] EsLint Support
 - [x] No dependency on grunt, gulp or the next hot taskrunner!
-- [x] The dynamic webpack configuration is clunky, there must be a better way to do that!
-- [x] Karmas webpack configuration is not included in the global webpack.config.js file, but it really should
 - [x] Support for environment-specific configuration files
 
 ## Todo
 - [ ] Better performance for webpack builds
 
 ## What is it for?
-This template can be used directly for the creation of new projects.
-Also it will be the "template" for the next version of generator-react-webpack.
+This template can be used directly for the creation of new projects. When using it like this, make sure to ___not___ install it via npm but download it directly. The template is (nearly) useless for itself when downloaded via npm!
+
+Basically, it is currently only used as the base template of [generator-react-webpack](https://github.com/newtriks/generator-react-webpack).
 
 ## Using it
-The template is available via webpack. The following commands are available:
+The template uses webpack as build tool to serve files and run tests. The following commands are available:
 ```bash
 # Start for development
 npm start # or
@@ -70,6 +69,6 @@ webpack-dev-server --env=dist
 react-webpack-template is available under MIT-License and can therefore be used in any project free of charge.
 
 ## Contributors
-- Weblogixx (cs@weblogixx.de)
+- Christian Schilling (cs@weblogixx.de)
 - Martin Jul (martin@mjul.com)
 - Stephan Herzog (sthzgvie@gmail.com)
