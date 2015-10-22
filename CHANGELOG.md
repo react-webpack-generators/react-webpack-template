@@ -1,5 +1,10 @@
 # react-webpack-template - Changelog
 
+## 0.3.0:
+___Upgrades___:
+1. Added webpacks define plugin for dist version
+2. Added new task ```test:watch``` to watch for changes
+
 ## 0.2.0:
 ___Upgrades:___
 1. Updated React from 0.13 to 0.14 (using ```^0.14```) as version string. This included minor code changes for components (now use the splitted "React"-Package) and the runner (Using React-DOM).
