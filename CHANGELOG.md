@@ -1,5 +1,11 @@
 # react-webpack-template - Changelog
 
+## 0.3.1:
+___Upgrades___:
+1. Added bugfix for tests in watch mode (could be overridden by config)
+2. Added new badges to README
+3. Updated devDependencies to current ones
+
 ## 0.3.0:
 ___Upgrades___:
 1. Added webpacks define plugin for dist version
