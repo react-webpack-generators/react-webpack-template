@@ -16,11 +16,19 @@ module.exports = {
           path.join(__dirname, '/../src'),
           path.join(__dirname, '/../test')
         ]
+      },
+      {
+        test: /\.(js|jsx)$/,
+        loader: 'babel-loader',
+        include: [
+          path.join(__dirname, '/../src')
+        ],
+        loader: 'isparta'
       }
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: [ '', '.js', '.jsx' ],
     alias: {
       actions: srcPath + 'actions/',
       helpers: path.join(__dirname, '/../test/helpers'),
