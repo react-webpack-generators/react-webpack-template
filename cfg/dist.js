@@ -7,7 +7,7 @@ var baseConfig = require('./base');
 // Add needed plugins here
 var BowerWebpackPlugin = require('bower-webpack-plugin');
 
-var config = _.merge({
+var config = _.merge(baseConfig, {
   entry: path.join(__dirname, '../src/components/run'),
   cache: false,
   devtool: 'sourcemap',
@@ -24,7 +24,7 @@ var config = _.merge({
     new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.NoErrorsPlugin()
   ]
-}, baseConfig);
+});
 
 config.module.loaders.push({
   test: /\.(js|jsx)$/,
