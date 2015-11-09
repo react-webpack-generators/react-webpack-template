@@ -45,6 +45,10 @@ module.exports = {
         loader: 'style!css'
       },
       {
+        test: /\.pss$/,
+        loader: 'style-loader!css-loader!postcss-loader'
+      },
+      {
         test: /\.sass/,
         loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded&indentedSyntax'
       },
@@ -65,5 +69,13 @@ module.exports = {
         loader: 'url-loader?limit=8192'
       }
     ]
+  },
+  postcss: function () {
+    return [
+      require('autoprefixer')({
+        browsers: ['last 2 versions', 'ie >= 8']
+      }),
+      require('precss'),
+    ];
   }
 };
