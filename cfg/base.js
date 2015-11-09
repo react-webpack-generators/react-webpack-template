@@ -42,6 +42,10 @@ module.exports = {
     loaders: [
       {
         test: /\.css$/,
+        loader: 'style!css'
+      },
+      {
+        test: /\.pss$/,
         loader: 'style-loader!css-loader!postcss-loader'
       },
       {
