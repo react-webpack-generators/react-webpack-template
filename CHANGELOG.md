@@ -1,5 +1,15 @@
 # react-webpack-template - Changelog
 
+## 1.0.0:
+___Upgrades___:
+1. Updated to babel core version (6.0.x)
+2. Replaced isparta-loader with the more current (and better maintained) isparta-instrumenter-loader.
+
+## 0.3.2:
+___Features___:
+1. Added support for bower components in webpack
+2. Added coverage reporting via karma-coverage
+
 ## 0.3.1:
 ___Upgrades___:
 1. Added bugfix for tests in watch mode (could be overridden by config)

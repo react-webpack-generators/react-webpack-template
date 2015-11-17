@@ -23,8 +23,11 @@ module.exports = function(config) {
       noInfo: true
     },
     coverageReporter: {
-      type: 'html',
-      dir: 'coverage/'
+      dir: 'coverage/',
+      reporters: [
+        { type: 'html' },
+        { type: 'text' }
+      ]
     }
   });
 };

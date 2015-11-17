@@ -7,6 +7,15 @@ var BowerWebpackPlugin = require('bower-webpack-plugin');
 module.exports = {
   devtool: 'eval',
   module: {
+    preLoaders: [
+      {
+        test: /\.(js|jsx)$/,
+        loader: 'isparta-instrumenter-loader',
+        include: [
+          path.join(__dirname, '/../src')
+        ]
+      }
+    ],
     loaders: [
       {
         test: /\.(png|jpg|gif|woff|woff2|css|sass|scss|less|styl)$/,
@@ -19,14 +28,6 @@ module.exports = {
           path.join(__dirname, '/../src'),
           path.join(__dirname, '/../test')
         ]
-      },
-      {
-        test: /\.(js|jsx)$/,
-        loader: 'babel-loader',
-        include: [
-          path.join(__dirname, '/../src')
-        ],
-        loader: 'isparta'
       }
     ]
   },
