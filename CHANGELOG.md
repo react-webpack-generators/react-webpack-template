@@ -1,5 +1,9 @@
 # react-webpack-template - Changelog
 
+## 1.0.1:
+___Upgrades___:
+1. Updated isparta-instrumenter-loader to new version 1.0
+
 ## 1.0.0:
 ___Upgrades___:
 1. Updated to babel core version (6.0.x)
