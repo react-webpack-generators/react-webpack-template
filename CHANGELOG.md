@@ -2,6 +2,10 @@
 
 ## 1.0.2:
 
+1. Added babel-eslint (as suggested in https://github.com/newtriks/generator-react-webpack/issues/173)
+
+## 1.0.2:
+
 1. Updated css-loader to current stable (0.23)
 2. Updated glob to new major (5.x to 6.x)
 
