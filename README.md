@@ -25,6 +25,7 @@ Basically, it is currently only used as the base template of [generator-react-we
 
 ## Using it
 The template uses webpack as build tool to serve files and run tests. The following commands are available:
+
 ```bash
 # Start for development
 npm start # or
@@ -53,6 +54,7 @@ npm run copy
 ```
 
 You can also use your globally installed version of webpack like this:
+
 ```bash
 # Build or run the dev version:
 webpack
@@ -65,6 +67,18 @@ webpack-dev-server --env=dev
 webpack --env=dist
 webpack-dev-server --env=dist
 ```
+
+## Including third party modules (e.g. from npm)
+The default setting for the webpack configuration is to only include the ```src``` and ```test``` directories. If you want to add any modules from npm, you have to add them in ```cfg/base.js```. One example is:
+
+```javascript
+// Somewhere on top of the file:
+let npmBase = path.join(__dirname, '../node_modules');
+let additionalPaths = [ path.join(npmBase, 'react-bootstrap') ];
+```
+
+All entries added to the additionalPaths array will be appended to the include path for babel.
+
 ## A note on unit testing
 When running tests, coverage information (provided via Istanbul) will also be written into the ```coverage/``` directory. If you do not need this, just comment out or remove the section in ```karma.conf``` like this:
 

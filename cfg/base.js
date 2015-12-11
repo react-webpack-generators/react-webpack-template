@@ -1,10 +1,19 @@
-var path = require('path');
+'use strict';
+let path = require('path');
 
-var port = 8000;
-var srcPath = path.join(__dirname, '/../src');
-var publicPath = '/assets/';
+let port = 8000;
+let srcPath = path.join(__dirname, '/../src');
+let publicPath = '/assets/';
+
+// Additional npm or bower modules to include in builds
+// Add all foreign plugins you may need into this array
+// @example:
+// let npmBase = path.join(__dirname, '../node_modules');
+// let additionalPaths = [ path.join(npmBase, 'react-bootstrap') ];
+let additionalPaths = [];
 
 module.exports = {
+  additionalPaths: additionalPaths,
   port: port,
   debug: true,
   output: {

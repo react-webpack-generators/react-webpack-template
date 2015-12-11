@@ -1,5 +1,15 @@
 # react-webpack-template - Changelog
 
+## 1.1.0:
+
+1. Added support for easier webpack include management (can now be set via cfg/base.js, see README.md)
+
+## 1.0.3:
+
+1. Support for config independent settings in ```src/config/base.js``` (provided by [sthzg](https://github.com/sthzg))
+2. Fixed eslint loader path (provided by [HelloYie](https://github.com/HelloYie))
+3. Added support for babel-eslint (as suggested in https://github.com/newtriks/generator-react-webpack/issues/173)
+
 ## 1.0.2:
 
 1. Added babel-eslint (as suggested in https://github.com/newtriks/generator-react-webpack/issues/173)

@@ -1,8 +1,12 @@
-var path = require('path');
-var srcPath = path.join(__dirname, '/../src/');
+'use strict';
+
+let path = require('path');
+let srcPath = path.join(__dirname, '/../src/');
+
+let baseConfig = require('./base');
 
 // Add needed plugins here
-var BowerWebpackPlugin = require('bower-webpack-plugin');
+let BowerWebpackPlugin = require('bower-webpack-plugin');
 
 module.exports = {
   devtool: 'eval',
@@ -24,10 +28,13 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
-        include: [
-          path.join(__dirname, '/../src'),
-          path.join(__dirname, '/../test')
-        ]
+        include: [].concat(
+          baseConfig.additionalPaths,
+          [
+            path.join(__dirname, '/../src'),
+            path.join(__dirname, '/../test')
+          ]
+        )
       }
     ]
   },

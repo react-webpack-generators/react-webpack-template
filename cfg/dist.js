@@ -1,13 +1,15 @@
-var path = require('path');
-var webpack = require('webpack');
-var _ = require('lodash');
+'use strict';
 
-var baseConfig = require('./base');
+let path = require('path');
+let webpack = require('webpack');
+let _ = require('lodash');
+
+let baseConfig = require('./base');
 
 // Add needed plugins here
-var BowerWebpackPlugin = require('bower-webpack-plugin');
+let BowerWebpackPlugin = require('bower-webpack-plugin');
 
-var config = _.merge({
+let config = _.merge({
   entry: path.join(__dirname, '../src/components/run'),
   cache: false,
   devtool: 'sourcemap',
@@ -29,7 +31,10 @@ var config = _.merge({
 config.module.loaders.push({
   test: /\.(js|jsx)$/,
   loader: 'babel',
-  include: path.join(__dirname, '/../src')
+  include: [].concat(
+    config.additionalPaths,
+    [ path.join(__dirname, '/../src') ]
+  )
 });
 
 module.exports = config;
