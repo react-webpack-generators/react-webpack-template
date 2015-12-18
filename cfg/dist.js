@@ -10,7 +10,7 @@ let baseConfig = require('./base');
 let BowerWebpackPlugin = require('bower-webpack-plugin');
 
 let config = _.merge({
-  entry: path.join(__dirname, '../src/components/run'),
+  entry: path.join(__dirname, '../src/index'),
   cache: false,
   devtool: 'sourcemap',
   plugins: [
