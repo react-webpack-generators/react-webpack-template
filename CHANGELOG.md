@@ -1,5 +1,11 @@
 # react-webpack-template - Changelog
 
+## 1.2.0:
+
+1. Updated core-js to new 2.0 stable
+2. Moved lodash and react-addons-testutils to devDependencies (provided by [harunhasdal](https://github.com/harunhasdal))
+3. Moved run component from ```src/components/run.js``` to ```src/index.js``` (provided by [stylesuxx](https://github.com/stylesuxx))
+
 ## 1.1.0:
 
 1. Added support for easier webpack include management (can now be set via cfg/base.js, see README.md)
