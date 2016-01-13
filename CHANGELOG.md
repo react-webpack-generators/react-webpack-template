@@ -1,5 +1,10 @@
 # react-webpack-template - Changelog
 
+## 1.2.1:
+
+1. Updated lodash to latest stable version
+2. Cleaned up formatting of unittests
+
 ## 1.2.0:
 
 1. Updated core-js to new 2.0 stable
