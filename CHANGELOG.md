@@ -1,5 +1,9 @@
 # react-webpack-template - Changelog
 
+## 1.4.0:
+
+1. Refactored webpack config to use Object.assign instead of lodash
+
 ## 1.3.1:
 
 1. Removed karma-phantomjs-shim (with PhantomJS 2 there is no need for shims anymore)
