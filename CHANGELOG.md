@@ -1,5 +1,9 @@
 # react-webpack-template - Changelog
 
+## 1.3.0:
+
+1. Updated phantomjs to 2.0
+
 ## 1.2.1:
 
 1. Updated lodash to latest stable version
