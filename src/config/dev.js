@@ -2,7 +2,6 @@
 
 import baseConfig from './base';
 
-
 let config = {
   appEnv: 'dev'  // feel free to remove the appEnv property here
 };

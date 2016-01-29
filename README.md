@@ -9,14 +9,11 @@ The following features are currently included:
 
 - [x] Webpack and Webpack-Dev-Server, including hot-loader
 - [x] Babel and JSX
-- [x] Mocha Unit tests (*optional*)
+- [x] Mocha Unit tests
 - [x] esLint Support
 - [x] No dependency on grunt, gulp or the next hot taskrunner!
 - [x] Support for environment-specific configuration files
 - [x] Support for code coverage via [isparta-loader](https://github.com/deepsweet/isparta-loader)
-
-## Todo
-- [ ] Better performance for webpack builds
 
 ## What is it for?
 This template can be used directly for the creation of new projects. When using it like this, make sure to ___not___ install it via npm but download it directly. The template is (nearly) useless for itself when downloaded via npm!

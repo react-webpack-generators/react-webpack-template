@@ -2,14 +2,14 @@
 
 let path = require('path');
 let webpack = require('webpack');
-let _ = require('lodash');
 
 let baseConfig = require('./base');
+let defaultSettings = require('./defaults');
 
 // Add needed plugins here
 let BowerWebpackPlugin = require('bower-webpack-plugin');
 
-let config = _.merge({
+let config = Object.assign({}, baseConfig, {
   entry: path.join(__dirname, '../src/index'),
   cache: false,
   devtool: 'sourcemap',
@@ -25,9 +25,11 @@ let config = _.merge({
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.NoErrorsPlugin()
-  ]
-}, baseConfig);
+  ],
+  module: defaultSettings.getDefaultModules()
+});
 
+// Add needed loaders to the defaults here
 config.module.loaders.push({
   test: /\.(js|jsx)$/,
   loader: 'babel',
