@@ -9,7 +9,7 @@ module.exports = function(config) {
     ],
     port: 8080,
     captureTimeout: 60000,
-    frameworks: [ 'phantomjs-shim', 'mocha', 'chai' ],
+    frameworks: [ 'mocha', 'chai' ],
     client: {
       mocha: {}
     },

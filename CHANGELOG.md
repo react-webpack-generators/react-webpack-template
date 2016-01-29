@@ -1,5 +1,9 @@
 # react-webpack-template - Changelog
 
+## 1.3.1:
+
+1. Removed karma-phantomjs-shim (with PhantomJS 2 there is no need for shims anymore)
+
 ## 1.3.0:
 
 1. Updated phantomjs to 2.0
