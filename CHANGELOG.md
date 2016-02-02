@@ -3,6 +3,7 @@
 ## 1.4.0:
 
 1. Refactored webpack config to use Object.assign instead of lodash
+2. Added dynamic port for webpack dev server (provided by [kashiif](https://github.com/kashiif))
 
 ## 1.3.1:
 

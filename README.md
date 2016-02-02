@@ -108,3 +108,4 @@ react-webpack-template is available under MIT-License and can therefore be used 
 - Christian Schilling (cs@weblogixx.de)
 - Martin Jul (martin@mjul.com)
 - Stephan Herzog (sthzgvie@gmail.com)
+- Kashif Iqbal Khan
