@@ -5,6 +5,7 @@ module.exports = function(config) {
     basePath: '',
     browsers: [ 'PhantomJS' ],
     files: [
+      'node_modules/babel-polyfill/dist/polyfill.js',
       'test/loadtests.js'
     ],
     port: 8080,
