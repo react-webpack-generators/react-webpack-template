@@ -109,3 +109,4 @@ react-webpack-template is available under MIT-License and can therefore be used 
 - Martin Jul (martin@mjul.com)
 - Stephan Herzog (sthzgvie@gmail.com)
 - Kashif Iqbal Khan
+- Ignat Shining (mail@igonato.com)
