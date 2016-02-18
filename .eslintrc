@@ -3,9 +3,12 @@
   "plugins": [
     "react"
   ],
-  "ecmaFeatures": {
-    "jsx": true,
-    "modules": true
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
   "env": {
     "browser": true,
@@ -25,6 +28,7 @@
     "no-trailing-spaces": [1, { "skipBlankLines": true }],
     "no-unreachable": 1,
     "no-alert": 0,
-    "react/jsx-uses-react": 1
+    "react/jsx-uses-react": 1,
+    "react/jsx-uses-vars": 1
   }
 }
