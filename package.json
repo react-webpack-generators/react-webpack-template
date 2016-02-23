@@ -48,7 +48,7 @@
     "css-loader": "^0.23.0",
     "eslint": "^2.0.0",
     "eslint-loader": "^1.0.0",
-    "eslint-plugin-react": "^3.3.0",
+    "eslint-plugin-react": "^4.0.0",
     "file-loader": "^0.8.4",
     "glob": "^7.0.0",
     "isparta-instrumenter-loader": "^1.0.0",
