@@ -1,5 +1,11 @@
 # react-webpack-template - Changelog
 
+## 1.5.0:
+
+1. Added babel polyfill to tests per default (provided by [Igonato](https://github.com/Igonato))
+2. Updated eslint to version 2.0
+3. Updated glob package to version 7.0
+
 ## 1.4.0:
 
 1. Refactored webpack config to use Object.assign instead of lodash
