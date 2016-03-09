@@ -1,5 +1,10 @@
 # react-webpack-template - Changelog
 
+## 1.5.1:
+
+1. Emergency fix for corruct eslint version (2.3 is currently buggy). Fixes https://github.com/newtriks/generator-react-webpack/issues/196
+2. Added mocha to eslint global config as requested in https://github.com/newtriks/generator-react-webpack/issues/195
+
 ## 1.5.0:
 
 1. Added babel polyfill to tests per default (provided by [Igonato](https://github.com/Igonato))
