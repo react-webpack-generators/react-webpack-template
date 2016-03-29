@@ -1,5 +1,9 @@
 # react-webpack-template - Changelog
 
+## 1.5.3:
+
+1. Asset paths are now relative (makes it easier to use bundles in subdirectories)
+
 ## 1.5.2:
 
 1. Updated dependencies to latests (babel-eslint, eslint, karma-mocha-reporter, normalize.css)
