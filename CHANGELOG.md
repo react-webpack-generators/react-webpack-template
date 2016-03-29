@@ -3,6 +3,7 @@
 ## 1.5.3:
 
 1. Asset paths are now relative (makes it easier to use bundles in subdirectories)
+2. Removed loading problems for webpack configurations overriding (see https://github.com/newtriks/generator-react-webpack/issues/194)
 
 ## 1.5.2:
 
@@ -10,7 +11,7 @@
 
 ## 1.5.1:
 
-1. Emergency fix for corruct eslint version (2.3 is currently buggy). Fixes https://github.com/newtriks/generator-react-webpack/issues/196
+1. Emergency fix for correct eslint version (2.3 is currently buggy). Fixes https://github.com/newtriks/generator-react-webpack/issues/196
 2. Added mocha to eslint global config as requested in https://github.com/newtriks/generator-react-webpack/issues/195
 
 ## 1.5.0:
