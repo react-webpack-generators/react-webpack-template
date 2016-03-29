@@ -1,5 +1,9 @@
 # react-webpack-template - Changelog
 
+## 1.5.2:
+
+1. Updated dependencies to latests (babel-eslint, eslint, karma-mocha-reporter, normalize.css)
+
 ## 1.5.1:
 
 1. Emergency fix for corruct eslint version (2.3 is currently buggy). Fixes https://github.com/newtriks/generator-react-webpack/issues/196
