@@ -4,6 +4,7 @@
 
 1. Asset paths are now relative (makes it easier to use bundles in subdirectories)
 2. Removed loading problems for webpack configurations overriding (see https://github.com/newtriks/generator-react-webpack/issues/194)
+3. Added missing loader configuration for movies and svg file types
 
 ## 1.5.2:
 
