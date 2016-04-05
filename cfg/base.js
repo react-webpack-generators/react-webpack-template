@@ -41,7 +41,7 @@ module.exports = {
       `${defaultSettings.srcPath}`
     ],
     alias: {
-      config: `${defaultSettings.srcPath}/config` + process.env.REACT_WEBPACK_ENV
+      config: `${defaultSettings.srcPath}/config/` + process.env.REACT_WEBPACK_ENV
     }
   },
   module: {}
