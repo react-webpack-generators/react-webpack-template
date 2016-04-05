@@ -38,9 +38,11 @@ module.exports = {
       `${defaultSettings.srcPath}/styles`,
       `${defaultSettings.srcPath}/helpers`,
       `${defaultSettings.srcPath}/data`,
-      `${defaultSettings.srcPath}/config` + process.env.REACT_WEBPACK_ENV,
       `${defaultSettings.srcPath}`
-  ]
+    ],
+    alias: {
+      config: `${defaultSettings.srcPath}/config` + process.env.REACT_WEBPACK_ENV
+    }
   },
   module: {}
 };
