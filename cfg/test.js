@@ -1,8 +1,7 @@
 'use strict';
 
 let path = require('path');
-let srcPath = path.join(__dirname, '/../src/');
-
+let defaultSettings = require('./defaults');
 let baseConfig = require('./base');
 
 // Add needed plugins here
@@ -40,15 +39,11 @@ module.exports = {
   },
   resolve: {
     extensions: [ '', '.js', '.jsx' ],
-    alias: {
-      actions: srcPath + 'actions/',
-      helpers: path.join(__dirname, '/../test/helpers'),
-      components: srcPath + 'components/',
-      sources: srcPath + 'sources/',
-      stores: srcPath + 'stores/',
-      styles: srcPath + 'styles/',
-      config: srcPath + 'config/' + process.env.REACT_WEBPACK_ENV
-    }
+    root: [].concat(
+        baseConfig.resolve.root,
+        [`${defaultSettings.srcPath}/test`]
+    ),
+    alias: baseConfig.resolve.alias
   },
   plugins: [
     new BowerWebpackPlugin({
