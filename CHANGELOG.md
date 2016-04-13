@@ -1,5 +1,9 @@
 # react-webpack-template - Changelog
 
+## 1.6.0:
+
+1. Updated react to new stable (15.0.0)
+
 ## 1.5.3:
 
 1. Asset paths are now relative (makes it easier to use bundles in subdirectories)
