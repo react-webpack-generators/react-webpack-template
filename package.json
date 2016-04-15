@@ -1,0 +1,30 @@
+{
+  "name": "react-webpack-template",
+  "version": "2.0.0-alpha-1",
+  "description": "Boilerplate Template for React and Webpack",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js --env=dev",
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://weblogixx@github.com/weblogixx/react-webpack-template.git"
+  },
+  "keywords": [
+    "React",
+    "Webpack",
+    "Babel",
+    "Boilerplate"
+  ],
+  "author": "Christian Schilling (cs@weblogixx.de)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/weblogixx/react-webpack-template/issues"
+  },
+  "homepage": "https://github.com/weblogixx/react-webpack-template#readme",
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}
