@@ -4,8 +4,8 @@
   "description": "Boilerplate Template for React and Webpack",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js --env=dev",
-    "test": "karma start"
+    "start": "webpack",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,24 @@
   },
   "homepage": "https://github.com/weblogixx/react-webpack-template#readme",
   "devDependencies": {
+    "babel-core": "^6.7.6",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015-native-modules": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "css-loader": "^0.23.1",
+    "eslint": "^2.8.0",
+    "eslint-config-airbnb": "^7.0.0",
+    "eslint-plugin-import": "^1.4.0",
+    "eslint-plugin-jsx-a11y": "^0.6.2",
+    "eslint-plugin-react": "^4.3.0",
+    "file-loader": "^0.8.5",
+    "react-addons-test-utils": "^15.0.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.1.0-beta.5"
   },
   "dependencies": {
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1"
   }
 }
