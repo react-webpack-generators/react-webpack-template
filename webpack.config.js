@@ -8,7 +8,7 @@ const x = {
   devServer: {
     contentBase: './src/',
     publicPath: '/assets/',
-    hot: true
+    historyApiFallback: true
   },
   entry: './index.js',
   module: {
