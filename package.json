@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run serve:dev",
     "test": "mocha",
-    "serve:dev": "webpack-dev-server --open --progress --env dev",
+    "serve:dev": "webpack-dev-server --open --env dev",
     "dist": "webpack --progress --env dist -p"
   },
   "repository": {

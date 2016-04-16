@@ -19,14 +19,14 @@ const x = {
       },
       {
         test: /\.(png|jpg|gif|mp4|ogg|svg|woff|woff2)$/,
-        loaders: ['file-loader']
+        loaders: ['file']
       },
       {
         test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        loaders: [
-          'babel-loader'
-        ]
+        include: [
+          path.resolve('src')
+        ],
+        loaders: ['babel']
       }
     ]
   },
