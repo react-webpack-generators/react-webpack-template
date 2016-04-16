@@ -9,7 +9,7 @@ You may use this template either directly (by cloning this git repository) or by
 ## Features
 The following features are currently included out of the box:
 
-- [ ] Webpack 2 setup to get you started (including support for LESS/SASS/SCSS and PostCSS)
+- [ ] Webpack 2 setup to get you started (including support for Hot-Loading, LESS/SASS/SCSS and PostCSS)
 - [ ] Babel 6 to transpile ES2015 and JSX
 - [ ] React 15
 - [ ] Mocha, Chai and Enzyme for easy unit testing

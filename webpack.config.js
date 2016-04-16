@@ -5,6 +5,11 @@ const x = {
   context: path.resolve('./src'),
   debug: true,
   devtool: 'eval',
+  devServer: {
+    contentBase: './src/',
+    publicPath: '/assets/',
+    hot: true
+  },
   entry: './index.js',
   module: {
     loaders: [
@@ -40,4 +45,8 @@ const x = {
   }
 };
 
-module.exports = x;
+module.exports = (configName) => {
+
+  x.configName = configName;
+  return x;
+};
