@@ -1,52 +1,24 @@
-// const webpack = require('webpack');
-const path = require('path');
-
-const x = {
-  context: path.resolve('./src'),
-  debug: true,
-  devtool: 'eval',
-  devServer: {
-    contentBase: './src/',
-    publicPath: '/assets/',
-    historyApiFallback: true
-  },
-  entry: './index.js',
-  module: {
-    loaders: [
-      {
-        test: /\.css$/,
-        loaders: ['style', 'css']
-      },
-      {
-        test: /\.(png|jpg|gif|mp4|ogg|svg|woff|woff2)$/,
-        loaders: ['file']
-      },
-      {
-        test: /\.(js|jsx)$/,
-        include: [
-          path.resolve('src')
-        ],
-        loaders: ['babel']
-      }
-    ]
-  },
-  output: {
-    path: path.resolve('./dist/assets'),
-    filename: 'app.js',
-    publicPath: './assets/'
-  },
-  plugins: [],
-  resolve: {
-    extensions: ['', '.js', '.jsx'],
-    modules: [
-      path.resolve('./src'),
-      'node_modules'
-    ]
-  }
-};
+'use strict';
+const webpackConfigs = require('./conf/webpack');
+const defaultConfig = 'dev';
 
 module.exports = (configName) => {
 
-  x.configName = configName;
-  return x;
+  // Return a new instance of the webpack config
+  // or the default one if it cannot be found.
+  let loadedConfig = defaultConfig;
+
+  if (webpackConfigs[configName] !== undefined) {
+    loadedConfig = webpackConfigs[configName];
+  } else {
+    console.warn(`
+      Provided environment "${configName}" was not found.
+      Please use one of the following ones:
+      ${Object.keys(webpackConfigs).join(' ')}
+    `);
+    loadedConfig = webpackConfigs[defaultConfig];
+  }
+
+  const LoadedInstance = new loadedConfig();
+  return LoadedInstance.config;
 };

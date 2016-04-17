@@ -7,7 +7,7 @@
     "start": "npm run serve:dev",
     "test": "mocha",
     "serve:dev": "webpack-dev-server --open --env dev",
-    "dist": "webpack --progress --env dist -p"
+    "dist": "webpack --progress --bail --env dist -p"
   },
   "repository": {
     "type": "git",
@@ -46,5 +46,10 @@
   "dependencies": {
     "react": "^15.0.1",
     "react-dom": "^15.0.1"
-  }
+  },
+  "engines": {
+    "node": ">= 4.0.0",
+    "iojs": ">= 1.0.0"
+  },
+  "engineStrict": true
 }
