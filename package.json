@@ -6,6 +6,7 @@
   "scripts": {
     "start": "npm run serve:dev",
     "test": "mocha",
+    "test:watch": "npm run test -- -w",
     "serve:dev": "webpack-dev-server --open --env dev",
     "dist": "webpack --progress --bail --env dist -p"
   },
@@ -28,19 +29,26 @@
   "devDependencies": {
     "babel-core": "^6.7.6",
     "babel-loader": "^6.2.4",
+    "babel-preset-airbnb": "^1.1.1",
     "babel-preset-es2015-native-modules": "^6.6.0",
     "babel-preset-react": "^6.5.0",
+    "chai": "^3.5.0",
     "css-loader": "^0.23.1",
+    "enzyme": "^2.2.0",
     "eslint": "^2.8.0",
     "eslint-config-airbnb": "^7.0.0",
     "eslint-plugin-import": "^1.4.0",
     "eslint-plugin-jsx-a11y": "^0.6.2",
     "eslint-plugin-react": "^4.3.0",
     "file-loader": "^0.8.5",
+    "jsdom": "^8.4.0",
+    "mocha": "^2.4.5",
+    "null-loader": "^0.1.1",
     "react-addons-test-utils": "^15.0.1",
+    "sinon": "^1.17.3",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^2.1.0-beta.5",
+    "webpack": "^2.1.0-beta.6",
     "webpack-dev-server": "^2.0.0-beta"
   },
   "dependencies": {

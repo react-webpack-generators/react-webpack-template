@@ -1,0 +1,6 @@
+--ui bdd
+--reporter spec
+--recursive
+--require ./conf/mocha/fakedom
+--require ./conf/mocha/webpackexclude
+--require ./conf/mocha/chai
