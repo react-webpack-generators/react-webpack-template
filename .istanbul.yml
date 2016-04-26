@@ -1,0 +1,9 @@
+instrumentation:
+  root: src
+  include-all-sources: true
+  save-baseline: true
+
+reporting:
+  reports:
+    - text
+    - lcov

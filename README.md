@@ -10,11 +10,12 @@ You may use this template either directly (by cloning this git repository) or by
 The following features are currently included out of the box:
 
 - [ ] Webpack 2 setup to get you started (including support for Hot-Loading, LESS/SASS/SCSS and PostCSS)
-- [ ] Babel 6 to transpile ES2015 and JSX
-- [ ] React 15
-- [ ] Mocha, Chai and Enzyme for easy unit testing
-- [ ] Preconfigured .editorconfig file
-- [ ] Preconfigured eslint configuration, based on airbnb
+- [x] Babel 6 to transpile ES2015 and JSX
+- [x] React 15.0
+- [x] Mocha, Chai and Enzyme for easy unit testing (without karma)
+- [x] Isparta for collecting coverage information
+- [x] Preconfigured .editorconfig file
+- [x] Preconfigured eslint configuration, based on airbnb
 
 ## Using it
 The template uses webpack as build tool to serve files and run tests. The following commands are available:

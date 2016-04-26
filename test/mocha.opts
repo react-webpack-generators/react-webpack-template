@@ -1,6 +1,7 @@
 --ui bdd
 --reporter spec
 --recursive
+--compilers js:babel-core/register
 --require ./conf/mocha/fakedom
 --require ./conf/mocha/webpackexclude
 --require ./conf/mocha/chai

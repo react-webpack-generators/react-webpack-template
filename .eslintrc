@@ -9,6 +9,7 @@
     "comma-dangle": 0,
     "padded-blocks": 0,
     "react/prefer-stateless-function": 0,
+    "react/jsx-no-bind": 0,
     "strict": 0,
     "no-unused-expressions": 0
   }
