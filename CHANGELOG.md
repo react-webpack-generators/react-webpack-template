@@ -1,5 +1,9 @@
 # react-webpack-template - Changelog
 
+## 1.6.1:
+
+1. Updated eslint-plugin-react to 5.x
+
 ## 1.6.0:
 
 1. Updated react to new stable (15.0.0)
