@@ -52,6 +52,22 @@ class WebpackBaseConfig {
             loaders: ['style', 'css']
           },
           {
+            test: /\.sass$/,
+            loaders: ['style', 'css', 'sass']
+          },
+          {
+            test: /\.scss$/,
+            loaders: ['style', 'css', 'sass']
+          },
+          {
+            test: /\.less$/,
+            loaders: ['style', 'css', 'less']
+          },
+          {
+            test: /\.styl$/,
+            loaders: ['style', 'css', 'stylus']
+          },
+          {
             test: /\.(png|jpg|gif|mp4|ogg|svg|woff|woff2)$/,
             loaders: ['file']
           },

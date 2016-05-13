@@ -3,7 +3,6 @@
  */
 'use strict';
 const WebpackBaseConfig = require('./Base');
-const path = require('path');
 
 class WebpackTestConfig extends WebpackBaseConfig {
 
@@ -22,10 +21,6 @@ class WebpackTestConfig extends WebpackBaseConfig {
         },
         {
           test: /\.(js|jsx)$/,
-          /*include: [
-            path.resolve('src'),
-            path.resolve('test')
-          ],*/
           exclude: /(node_modules|bower_components)/,
           loader: 'babel',
           query: {
