@@ -19,6 +19,9 @@ The following features are currently included out of the box:
 
 ## Common Questions:
 
+- I want to use react-router, but I dont know how to set it up:
+FOLLOWS
+
 - I want to use less/sass/whatever, but get an error when requiring the file:
 We currently do not ship the needed modules. This is done on purpose, as we dont want you to install too much dependencies. If you do not use a css precompiler, chance is you wont even notice it. If you need one, just install the required webpack loader (e.g. for less via ```npm install --save-dev less-loader```).
 

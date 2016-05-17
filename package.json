@@ -6,10 +6,13 @@
   "scripts": {
     "start": "npm run serve:dev",
     "test": "mocha",
+    "posttest": "npm run lint",
     "test:watch": "mocha -w",
     "cover": "babel-node ./node_modules/.bin/isparta cover ./node_modules/.bin/_mocha",
     "serve:dev": "webpack-dev-server --open --env dev",
-    "dist": "webpack --progress --bail --env dist -p"
+    "serve:dist": "webpack-dev-server --open --env dist",
+    "dist": "webpack --progress --bail --env dist -p",
+    "lint": "eslint ./src"
   },
   "repository": {
     "type": "git",
@@ -42,6 +45,7 @@
     "enzyme": "^2.2.0",
     "eslint": "^2.8.0",
     "eslint-config-airbnb": "^9.0.0",
+    "eslint-loader": "^1.3.0",
     "eslint-plugin-import": "^1.4.0",
     "eslint-plugin-jsx-a11y": "^1.0.0",
     "eslint-plugin-react": "^5.0.0",

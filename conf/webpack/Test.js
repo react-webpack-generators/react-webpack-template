@@ -3,6 +3,7 @@
  */
 'use strict';
 const WebpackBaseConfig = require('./Base');
+const webpack = require('webpack');
 
 class WebpackTestConfig extends WebpackBaseConfig {
 
@@ -27,8 +28,21 @@ class WebpackTestConfig extends WebpackBaseConfig {
             presets: ['react', 'es2015', 'stage-0'],
           }
         }
+      ],
+      plugins: [
+        new webpack.DefinePlugin({
+          'process.env.NODE_ENV': '"test"'
+        })
       ]
     };
+  }
+
+  /**
+   * Get the environment name
+   * @return {String} The current environment
+   */
+  get env() {
+    return 'test';
   }
 }
 

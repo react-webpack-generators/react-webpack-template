@@ -31,12 +31,28 @@ class WebpackBaseConfig {
   }
 
   /**
+   * Get the environment name
+   * @return {String} The current environment
+   */
+  get env() {
+    return 'dev';
+  }
+
+  /**
+   * Get the absolute path to src directory
+   * @return {String}
+   */
+  get srcPathAbsolute() {
+    return path.resolve('./src');
+  }
+
+  /**
    * Get the default settings
    * @return {Object}
    */
   get defaultSettings() {
     return {
-      context: path.resolve('./src'),
+      context: this.srcPathAbsolute,
       debug: false,
       devtool: 'eval',
       devServer: {
@@ -46,6 +62,13 @@ class WebpackBaseConfig {
       },
       entry: './index.js',
       module: {
+        preLoaders: [
+          {
+            test: /\.(js|jsx)$/,
+            include: this.srcPathAbsolute,
+            loader: 'eslint'
+          }
+        ],
         loaders: [
           {
             test: /\.css$/,
@@ -74,7 +97,7 @@ class WebpackBaseConfig {
           {
             test: /\.(js|jsx)$/,
             include: [
-              path.resolve('src')
+              this.srcPathAbsolute
             ],
             loaders: ['babel']
           }
@@ -87,9 +110,17 @@ class WebpackBaseConfig {
       },
       plugins: [],
       resolve: {
+        alias: {
+          actions: `${this.srcPathAbsolute}/actions/`,
+          components: `${this.srcPathAbsolute}/components/`,
+          config: `${this.srcPathAbsolute}/config/${this.env}.js`,
+          images: `${this.srcPathAbsolute}/images/`,
+          sources: `${this.srcPathAbsolute}/sources/`,
+          stores: `${this.srcPathAbsolute}/stores/`
+        },
         extensions: ['', '.js', '.jsx'],
         modules: [
-          path.resolve('./src'),
+          this.srcPathAbsolute,
           'node_modules'
         ]
       }

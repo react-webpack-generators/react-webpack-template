@@ -12,6 +12,7 @@
     "react/jsx-no-bind": 0,
     "strict": 0,
     "no-unused-expressions": 0,
-    "no-underscore-dangle": [ "error", { "allowAfterThis": true }]
+    "no-underscore-dangle": [ "error", { "allowAfterThis": true }],
+    "import/no-unresolved": [ "error", "ignore": [ 'config' ] ]
   }
 }
