@@ -47,18 +47,30 @@ class WebpackBaseConfig {
   }
 
   /**
+   * Get the absolute path to tests directory
+   * @return {String}
+   */
+  get testPathAbsolute() {
+    return path.resolve('./test');
+  }
+
+  /**
    * Get the default settings
    * @return {Object}
    */
   get defaultSettings() {
     return {
+      cache: true,
       context: this.srcPathAbsolute,
       debug: false,
       devtool: 'eval',
       devServer: {
         contentBase: './src/',
         publicPath: '/assets/',
-        historyApiFallback: true
+        historyApiFallback: true,
+        hot: true,
+        inline: true,
+        port: 8080
       },
       entry: './index.js',
       module: {
@@ -99,7 +111,7 @@ class WebpackBaseConfig {
             include: [
               this.srcPathAbsolute
             ],
-            loaders: ['babel']
+            loaders: ['react-hot', 'babel']
           }
         ]
       },

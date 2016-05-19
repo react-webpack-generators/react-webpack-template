@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Main from '../../src/components/Main';
+import App from 'components/App';
 
-describe('<Main />', () => {
+describe('<App />', () => {
 
   let component;
   beforeEach(() => {
-    component = shallow(<Main />);
+    component = shallow(<App />);
   });
 
   describe('when rendering the component', () => {

@@ -3,6 +3,7 @@
  */
 'use strict';
 
+const webpack = require('webpack');
 const WebpackBaseConfig = require('./Base');
 
 class WebpackDevConfig extends WebpackBaseConfig {
@@ -11,6 +12,15 @@ class WebpackDevConfig extends WebpackBaseConfig {
     super();
     this.config = {
       devtool: 'cheap-module-source-map',
+      entry: [
+        'webpack-dev-server/client?http://0.0.0.0:8080/',
+        'webpack/hot/only-dev-server',
+        './index.js'
+      ],
+      plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoErrorsPlugin()
+      ]
     };
   }
 }
