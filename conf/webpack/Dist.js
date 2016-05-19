@@ -12,6 +12,7 @@ class WebpackDistConfig extends WebpackBaseConfig {
   constructor() {
     super();
     this.config = {
+      cache: false,
       devtool: 'source-map',
       plugins: [
         new webpack.DefinePlugin({

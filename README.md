@@ -10,11 +10,11 @@ You may use this template either directly (by cloning this git repository) or by
 The following features are currently included out of the box:
 
 - [x] Webpack 2 setup to get you started (including basic support for LESS/SASS/SCSS/Stylus and PostCSS)
-- [ ] CSS Modules support
+- [x] CSS Modules support via https://github.com/gajus/react-css-modules
 - [x] Babel 6 to transpile ES2015 and JSX
 - [x] Latest stable React Version (v15.0)
-- [x] Karma, Mocha, Chai and Enzyme for easier unit testing
-- [x] Isparta to collect coverage information
+- [x] [Karma](http://karma-runner.github.io), [Mocha](https://mochajs.org), [Chai](http://chaijs.com) and [Enzyme](http://airbnb.io/projects/enzyme/) for easier unit testing
+- [x] Istanbul with Isparta to collect coverage information
 - [x] Preconfigured .editorconfig file
 - [x] Preconfigured eslint configuration, based on airbnb
 

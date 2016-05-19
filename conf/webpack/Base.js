@@ -84,23 +84,42 @@ class WebpackBaseConfig {
         loaders: [
           {
             test: /\.css$/,
-            loaders: ['style', 'css']
+            loaders: [
+              'style',
+              'css?modules&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]'
+            ]
           },
           {
             test: /\.sass$/,
-            loaders: ['style', 'css', 'sass']
+            loaders: [
+              'style',
+              'css?modules&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]',
+              'sass'
+            ]
           },
           {
             test: /\.scss$/,
-            loaders: ['style', 'css', 'sass']
+            loaders: [
+              'style',
+              'css?modules&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]',
+              'sass'
+            ]
           },
           {
             test: /\.less$/,
-            loaders: ['style', 'css', 'less']
+            loaders: [
+              'style',
+              'css?modules&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]',
+              'less'
+            ]
           },
           {
             test: /\.styl$/,
-            loaders: ['style', 'css', 'stylus']
+            loaders: [
+              'style',
+              'css?modules&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]',
+              'stylus'
+            ]
           },
           {
             test: /\.(png|jpg|gif|mp4|ogg|svg|woff|woff2)$/,
