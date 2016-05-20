@@ -9,14 +9,19 @@ You may use this template either directly (by cloning this git repository) or by
 ## Features
 The following features are currently included out of the box:
 
-- [x] Webpack 2 setup to get you started (including basic support for LESS/SASS/SCSS/Stylus and PostCSS)
-- [x] CSS Modules support via https://github.com/gajus/react-css-modules
+- [x] Webpack 2 setup to get you started (including basic support for LESS/SASS/SCSS/Stylus)
+- [x] CSS-Modules support via https://github.com/gajus/react-css-modules
 - [x] Babel 6 to transpile ES2015 and JSX
 - [x] Latest stable React Version (v15.0)
 - [x] [Karma](http://karma-runner.github.io), [Mocha](https://mochajs.org), [Chai](http://chaijs.com) and [Enzyme](http://airbnb.io/projects/enzyme/) for easier unit testing
 - [x] Istanbul with Isparta to collect coverage information
 - [x] Preconfigured .editorconfig file
 - [x] Preconfigured eslint configuration, based on airbnb
+
+## Whats new in Version 2.x?
+
+- Support for Bower-Webpack has been removed. Most modules are fetched via npm anyway.
+- Support for the global styles folder is deprecated. This function will be removed in one of the next versions.
 
 ## Common Questions:
 

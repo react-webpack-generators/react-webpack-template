@@ -4,11 +4,20 @@
 'use strict';
 
 const path = require('path');
+const npmBase = path.join(__dirname, '../../node_modules');
 
 class WebpackBaseConfig {
 
   constructor() {
     this._config = {};
+  }
+
+  /**
+   * Get the list of included packages
+   * @return {Array} List of included packages
+   */
+  get includedPackages() {
+    return [].map((pkg) => path.join(npmBase, pkg));
   }
 
   /**
@@ -127,9 +136,10 @@ class WebpackBaseConfig {
           },
           {
             test: /\.(js|jsx)$/,
-            include: [
-              this.srcPathAbsolute
-            ],
+            include: [].concat(
+              this.includedPackages,
+              [this.srcPathAbsolute]
+            ),
             loaders: ['react-hot', 'babel']
           }
         ]

@@ -81,10 +81,13 @@ class WebpackTestConfig extends WebpackBaseConfig {
             query: {
               presets: ['airbnb']
             },
-            include: [
-              this.srcPathAbsolute,
-              this.testPathAbsolute
-            ]
+            include: [].concat(
+              this.includedPackages,
+              [
+                this.srcPathAbsolute,
+                this.testPathAbsolute
+              ]
+            )
           }
         ]
       },
