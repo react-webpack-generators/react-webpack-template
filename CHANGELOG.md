@@ -1,5 +1,11 @@
 # react-webpack-template - Changelog
 
+## 1.6.2:
+
+1. Added back absolute paths to [make subroutes in react-router work](https://github.com/newtriks/generator-react-webpack/issues/228)
+2. Updated package dev dependencies to latest stable (karma-coverage, karma-mocha)
+3. Updated karma.conf.js to set test env automatically, adjusted run port to match default webpack port (8000 instead 8080)
+
 ## 1.6.1:
 
 1. Updated eslint-plugin-react to 5.x
