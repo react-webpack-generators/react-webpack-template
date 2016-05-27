@@ -1,6 +1,6 @@
 # react-webpack-template - Changelog
 
-## 1.6.2:
+## 1.7.0:
 
 1. Added back absolute paths to [make subroutes in react-router work](https://github.com/newtriks/generator-react-webpack/issues/228)
 2. Updated package dev dependencies to latest stable (karma-coverage, karma-mocha)
