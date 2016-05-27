@@ -14,9 +14,9 @@
     "lint": "eslint ./src",
     "clean": "rimraf dist/*",
     "copy": "copyfiles -f ./src/index.html ./src/favicon.ico ./dist",
-    "release:major": "npm version major && git push --follow-tags && npm publish --tag beta",
-    "release:minor": "npm version minor && git push --follow-tags && npm publish --tag beta",
-    "release:patch": "npm version patch && git push --follow-tags && npm publish --tag beta"
+    "release:major": "npm version prerelease && git push --follow-tags && npm publish --tag beta",
+    "release:minor": "npm version prerelease && git push --follow-tags && npm publish --tag beta",
+    "release:patch": "npm version prerelease && git push --follow-tags && npm publish --tag beta"
   },
   "repository": {
     "type": "git",
