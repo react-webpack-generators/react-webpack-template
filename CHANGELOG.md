@@ -1,5 +1,9 @@
 # react-webpack-template - Changelog
 
+## 1.7.1:
+
+1. Added support for missing rest/spread operator (using babel-stage-0 per default now)
+
 ## 1.7.0:
 
 1. Added back absolute paths to [make subroutes in react-router work](https://github.com/newtriks/generator-react-webpack/issues/228)
