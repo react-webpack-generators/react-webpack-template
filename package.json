@@ -46,6 +46,7 @@
     "babel-preset-airbnb": "^2.0.0",
     "babel-preset-es2015-native-modules": "^6.6.0",
     "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
     "chai": "^3.5.0",
     "copyfiles": "^0.2.1",
     "css-loader": "^0.23.1",
