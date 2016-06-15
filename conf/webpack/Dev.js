@@ -11,7 +11,7 @@ class WebpackDevConfig extends WebpackBaseConfig {
     this.config = {
       devtool: 'cheap-module-source-map',
       entry: [
-        'webpack-dev-server/client?http://0.0.0.0:8080/',
+        'webpack-dev-server/client?http://0.0.0.0:8000/',
         'webpack/hot/only-dev-server',
         './index.js'
       ],
