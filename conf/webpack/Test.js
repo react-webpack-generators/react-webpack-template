@@ -1,7 +1,6 @@
 /**
  * Default test configuration.
  */
-'use strict';
 const WebpackBaseConfig = require('./Base');
 const webpack = require('webpack');
 

@@ -1,8 +1,6 @@
 /**
  * Default dev server configuration.
  */
-'use strict';
-
 const webpack = require('webpack');
 const WebpackBaseConfig = require('./Base');
 

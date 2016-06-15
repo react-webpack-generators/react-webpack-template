@@ -1,6 +1,6 @@
 import React from 'react';
 import cssmodules from 'react-css-modules';
-import styles from './app.css';
+import styles from './app.cssmodule.css';
 
 const yeomanImage = require('../images/yeoman.png');
 

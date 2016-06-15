@@ -1,8 +1,6 @@
 /**
  * Webpack configuration base class
  */
-'use strict';
-
 const path = require('path');
 const npmBase = path.join(__dirname, '../../node_modules');
 
@@ -69,7 +67,6 @@ class WebpackBaseConfig {
    */
   get defaultSettings() {
     return {
-      cache: true,
       context: this.srcPathAbsolute,
       debug: false,
       devtool: 'eval',
@@ -92,25 +89,24 @@ class WebpackBaseConfig {
         ],
         loaders: [
           {
-            test: /\.css$/,
+            test: /\.cssmodule\.css$/,
             loaders: [
               'style',
               'css?modules&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]'
             ]
           },
           {
-            test: /\.sass$/,
+            test: /^.((?!cssmodule).)*\.css$/,
             loaders: [
               'style',
-              'css?modules&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]',
-              'sass'
+              'css'
             ]
           },
           {
-            test: /\.scss$/,
+            test: /\.(sass|scss)$/,
             loaders: [
               'style',
-              'css?modules&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]',
+              'css',
               'sass'
             ]
           },
@@ -118,7 +114,7 @@ class WebpackBaseConfig {
             test: /\.less$/,
             loaders: [
               'style',
-              'css?modules&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]',
+              'css',
               'less'
             ]
           },
@@ -126,13 +122,17 @@ class WebpackBaseConfig {
             test: /\.styl$/,
             loaders: [
               'style',
-              'css?modules&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]',
+              'css',
               'stylus'
             ]
           },
           {
             test: /\.(png|jpg|gif|mp4|ogg|svg|woff|woff2)$/,
             loaders: ['file']
+          },
+          {
+            test: /\.json$/,
+            loaders: 'json'
           },
           {
             test: /\.(js|jsx)$/,
