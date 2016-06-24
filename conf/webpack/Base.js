@@ -103,7 +103,15 @@ class WebpackBaseConfig {
             ]
           },
           {
-            test: /\.(sass|scss)$/,
+            test: /\.cssmodule\.(sass|scss)$/,
+            loaders: [
+              'style',
+              'css?modules&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]',
+              'sass'
+            ]
+          },
+          {
+            test: /^.((?!cssmodule).)*\.(sass|scss)$/,
             loaders: [
               'style',
               'css',
@@ -111,7 +119,15 @@ class WebpackBaseConfig {
             ]
           },
           {
-            test: /\.less$/,
+            test: /\.cssmodule\.less$/,
+            loaders: [
+              'style',
+              'css?modules&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]',
+              'less'
+            ]
+          },
+          {
+            test: /^.((?!cssmodule).)*\.less$/,
             loaders: [
               'style',
               'css',
@@ -119,7 +135,15 @@ class WebpackBaseConfig {
             ]
           },
           {
-            test: /\.styl$/,
+            test: /\.cssmodule\.styl$/,
+            loaders: [
+              'style',
+              'css?modules&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]',
+              'stylus'
+            ]
+          },
+          {
+            test: /^.((?!cssmodule).)*\.styl$/,
             loaders: [
               'style',
               'css',
