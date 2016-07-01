@@ -20,7 +20,7 @@ class WebpackTestConfig extends WebpackBaseConfig {
         preLoaders: [
           {
             test: /\.(js|jsx)$/,
-            loader: 'isparta-instrumenter-loader',
+            loader: 'isparta-loader',
             include: [
               this.srcPathAbsolute
             ]
