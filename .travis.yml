@@ -12,4 +12,5 @@ addons:
       - g++-4.8
 before_install:
   - currentfolder=${PWD##*/}
+  - if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
   - if [ "$currentfolder" != 'react-webpack-template' ]; then cd .. && eval "mv $currentfolder react-webpack-template" && cd react-webpack-template; fi
