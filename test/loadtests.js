@@ -1,3 +1,5 @@
+'use strict';
+
 // Add support for Promise objects via polyfills
 import 'babel-polyfill';
 

@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Default test configuration.
  */

@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Dist configuration. Used to build the
  * final output when running npm run dist.
