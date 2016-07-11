@@ -1,3 +1,5 @@
+'use strict';
+
 const webpackCfg = require('./webpack.config')('test');
 
 module.exports = function karmaConfig(config) {
