@@ -11,14 +11,16 @@
     "padded-blocks": 0,
     "react/prefer-stateless-function": 0,
     "no-underscore-dangle": [ "error", { "allowAfterThis": true }],
-    "import/no-unresolved": [ "error", "ignore": [
-      'config',
-      'components/',
-      'stores/',
-      'actions/',
-      'sources/',
-      'styles/',
-      'images/'
-    ]]
+    "import/no-unresolved": ["error", {
+        "ignore": [
+          "config",
+          "components/",
+          "stores/",
+          "actions/",
+          "sources/",
+          "styles/",
+          "images/"
+        ]
+    }]
   }
 }
