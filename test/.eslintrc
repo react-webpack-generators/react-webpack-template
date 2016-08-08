@@ -1,5 +1,8 @@
 {
   "globals": {
     "expect": true
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": 0
   }
 }

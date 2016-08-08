@@ -2,7 +2,7 @@
   "name": "react-webpack-template",
   "version": "2.0.1-4",
   "description": "React Webpack Starter Kit",
-  "main": "src/index.js",
+  "main": "src/exports.js",
   "scripts": {
     "start": "npm run serve:dev",
     "test": "karma start",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://weblogixx@github.com/weblogixx/react-webpack-template.git"
+    "url": "https://github.com/react-webpack-generators/react-webpack-template.git"
   },
   "keywords": [
     "React",
@@ -34,9 +34,9 @@
   "author": "Christian Schilling (cs@weblogixx.de)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/weblogixx/react-webpack-template/issues"
+    "url": "https://github.com/react-webpack-generators/react-webpack-template/issues"
   },
-  "homepage": "https://github.com/weblogixx/react-webpack-template#readme",
+  "homepage": "https://github.com/react-webpack-generators/react-webpack-template#readme",
   "devDependencies": {
     "babel-core": "^6.7.6",
     "babel-eslint": "^6.0.4",
@@ -51,12 +51,12 @@
     "copyfiles": "^1.0.0",
     "css-loader": "^0.23.1",
     "enzyme": "^2.2.0",
-    "eslint": "^2.8.0",
-    "eslint-config-airbnb": "^9.0.0",
+    "eslint": "^3.0.0",
+    "eslint-config-airbnb": "^10.0.0",
     "eslint-loader": "^1.3.0",
     "eslint-plugin-import": "^1.4.0",
-    "eslint-plugin-jsx-a11y": "^1.0.0",
-    "eslint-plugin-react": "^5.0.0",
+    "eslint-plugin-jsx-a11y": "^2.0.0",
+    "eslint-plugin-react": "^6.0.0",
     "file-loader": "^0.9.0",
     "isparta-loader": "^2.0.0",
     "karma": "^1.0.0",
@@ -69,7 +69,7 @@
     "karma-sinon": "^1.0.5",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.7.0",
-    "mocha": "^2.4.5",
+    "mocha": "^3.0.0",
     "null-loader": "^0.1.1",
     "phantomjs-prebuilt": "^2.1.7",
     "react-addons-test-utils": "^15.0.1",
