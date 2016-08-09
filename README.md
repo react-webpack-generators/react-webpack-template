@@ -1,7 +1,7 @@
 # React Webpack Template 2.0 (alpha)
 > A flexible, easy to use boilerplate to quickly get started with Webpack, Babel and React.
 
-[![Build Status](https://travis-ci.org/weblogixx/react-webpack-template.svg)](https://travis-ci.org/weblogixx/react-webpack-template) ![Amount of Downloads per month](https://img.shields.io/npm/dm/react-webpack-template.svg "Amount of Downloads") ![Dependency Tracker](https://img.shields.io/david/weblogixx/react-webpack-template.svg "Dependency Tracker") ![Dependency Tracker](https://img.shields.io/david/dev/weblogixx/react-webpack-template.svg "Dependency Tracker")
+[![Build Status](https://travis-ci.org/react-webpack-generators/react-webpack-template.svg)](https://travis-ci.org/weblogixx/react-webpack-template) ![Amount of Downloads per month](https://img.shields.io/npm/dm/react-webpack-template.svg "Amount of Downloads") ![Dependency Tracker](https://img.shields.io/david/react-webpack-generators/react-webpack-template.svg "Dependency Tracker") ![Dependency Tracker](https://img.shields.io/david/dev/react-webpack-generators/react-webpack-template.svg "Dependency Tracker")
 
 ## Usage:
 You may use this template either directly (by cloning this git repository) or by using [generator-react-webpack](https://github.com/newtriks/generator-react-webpack).
