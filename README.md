@@ -2,7 +2,7 @@
 > This repository holds the base template for the current version of [generator-react-webpack](https://github.com/newtriks/generator-react-webpack).
 It can also be used as the prototype for newly generated projects.
 
-[![Build Status](https://travis-ci.org/react-webpack-generators/react-webpack-template.svg)](https://travis-ci.org/weblogixx/react-webpack-template) ![Amount of Downloads per month](https://img.shields.io/npm/dm/react-webpack-template.svg "Amount of Downloads") ![Dependency Tracker](https://img.shields.io/david/react-webpack-generators/react-webpack-template.svg "Dependency Tracker") ![Dependency Tracker](https://img.shields.io/david/dev/react-webpack-generators/react-webpack-template.svg "Dependency Tracker")
+[![Build Status](https://travis-ci.org/react-webpack-generators/react-webpack-template.svg)](https://travis-ci.org/react-webpack-generators/react-webpack-template) ![Amount of Downloads per month](https://img.shields.io/npm/dm/react-webpack-template.svg "Amount of Downloads") ![Dependency Tracker](https://img.shields.io/david/react-webpack-generators/react-webpack-template.svg "Dependency Tracker") ![Dependency Tracker](https://img.shields.io/david/dev/react-webpack-generators/react-webpack-template.svg "Dependency Tracker")
 
 ## Features
 The following features are currently included:
