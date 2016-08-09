@@ -15,7 +15,7 @@ class WebpackDevConfig extends WebpackBaseConfig {
       entry: [
         'webpack-dev-server/client?http://0.0.0.0:8000/',
         'webpack/hot/only-dev-server',
-        './index.js'
+        './client.js'
       ],
       plugins: [
         new webpack.HotModuleReplacementPlugin(),
