@@ -1,5 +1,10 @@
 # react-webpack-template - Changelog
 
+## 1.7.2:
+
+1. Updated the list of dependencies
+2. Fixed README and package.json links (links now default to [react-webpack-generators](https://github.com/react-webpack-generators/react-webpack-template) org)
+
 ## 1.7.1:
 
 1. Added support for missing rest/spread operator (using babel-stage-0 per default now)

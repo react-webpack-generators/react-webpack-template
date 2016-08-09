@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://weblogixx@github.com/weblogixx/react-webpack-template.git"
+    "url": "https://github.com/react-webpack-generators/react-webpack-template.git"
   },
   "keywords": [
     "React",
@@ -32,9 +32,9 @@
   "author": "Christian Schilling (cs@weblogixx.de)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/weblogixx/react-webpack-template/issues"
+    "url": "https://github.com/react-webpack-generators/react-webpack-template/issues"
   },
-  "homepage": "https://github.com/weblogixx/react-webpack-template#readme",
+  "homepage": "https://github.com/react-webpack-generators/react-webpack-template#readme",
   "devDependencies": {
     "babel-core": "^6.0.0",
     "babel-eslint": "^6.0.0",
@@ -45,15 +45,15 @@
     "babel-preset-stage-0": "^6.5.0",
     "bower-webpack-plugin": "^0.1.9",
     "chai": "^3.2.0",
-    "copyfiles": "^0.2.1",
+    "copyfiles": "^1.0.0",
     "css-loader": "^0.23.0",
-    "eslint": "^2.2.0",
+    "eslint": "^3.0.0",
     "eslint-loader": "^1.0.0",
-    "eslint-plugin-react": "^5.0.0",
-    "file-loader": "^0.8.4",
+    "eslint-plugin-react": "^6.0.0",
+    "file-loader": "^0.9.0",
     "glob": "^7.0.0",
     "isparta-instrumenter-loader": "^1.0.0",
-    "karma": "^0.13.9",
+    "karma": "^1.0.0",
     "karma-chai": "^0.1.0",
     "karma-coverage": "^1.0.0",
     "karma-mocha": "^1.0.0",
@@ -62,7 +62,7 @@
     "karma-sourcemap-loader": "^0.3.5",
     "karma-webpack": "^1.7.0",
     "minimist": "^1.2.0",
-    "mocha": "^2.2.5",
+    "mocha": "^3.0.0",
     "null-loader": "^0.1.1",
     "open": "0.0.5",
     "phantomjs-prebuilt": "^2.0.0",
