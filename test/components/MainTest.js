@@ -10,14 +10,13 @@ import createComponent from 'helpers/shallowRenderHelper';
 
 import Main from 'components/Main';
 
-describe('MainComponent', () => {
-  let MainComponent;
+describe('MainComponent', function () {
 
-  beforeEach(() => {
-    MainComponent = createComponent(Main);
+  beforeEach(function () {
+    this.MainComponent = createComponent(Main);
   });
 
-  it('should have its component name as default className', () => {
-    expect(MainComponent.props.className).to.equal('index');
+  it('should have its component name as default className', function () {
+    expect(this.MainComponent.props.className).to.equal('index');
   });
 });
