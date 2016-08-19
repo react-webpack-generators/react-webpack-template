@@ -1,6 +1,6 @@
+/* eslint no-console: "off", strict: "off", import/newline-after-import: "off" */
 'use strict';
 
-/* eslint no-console: "off" */
 const webpackConfigs = require('./conf/webpack');
 const defaultConfig = 'dev';
 
