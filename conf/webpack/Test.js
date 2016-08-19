@@ -67,7 +67,8 @@ class WebpackTestConfig extends WebpackBaseConfig {
       plugins: [
         new webpack.DefinePlugin({
           'process.env.NODE_ENV': '"test"'
-        })
+        }),
+        super.pluginHtmlWebpack
       ]
     };
   }
