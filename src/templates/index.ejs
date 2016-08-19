@@ -1,0 +1,41 @@
+<!--
+@file This is the main template file that will be transformed to the index.html when running Webpack.
+
+See `conf/Base.js` for its initial configuration values. You can modify these to achieve customized template logic.
+
+Additional supported settings:
+
+- {string} lang   specifies the language of the content
+-->
+<!DOCTYPE html>
+<html lang="<%= htmlWebpackPlugin.options.lang || 'en' %>">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= htmlWebpackPlugin.options.title || 'Generator React Webpack'%></title>
+
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+
+  <% for (var css in htmlWebpackPlugin.files.css) { %>
+  <link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
+  <% } %>
+
+</head>
+<body>
+
+<% if (htmlWebpackPlugin.options.appMountId) { %>
+<div id="<%= htmlWebpackPlugin.options.appMountId%>"></div>
+<% } %>
+
+<% if (htmlWebpackPlugin.options.appMountIds && htmlWebpackPlugin.options.appMountIds.length > 0) { %>
+<% for (var index in htmlWebpackPlugin.options.appMountIds) { %>
+<div id="<%= htmlWebpackPlugin.options.appMountIds[index]%>"></div>
+<% } %>
+<% } %>
+
+<% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+<script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+<% } %>
+
+</body>
+</html>

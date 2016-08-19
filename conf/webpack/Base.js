@@ -4,12 +4,34 @@
  * Webpack configuration base class
  */
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 const npmBase = path.join(__dirname, '../../node_modules');
 
 class WebpackBaseConfig {
 
   constructor() {
     this._config = {};
+  }
+
+  /**
+   * Get a pre-configured instance of the HtmlPluginWebpack plugin
+   * @return {HtmlWebpackPlugin}
+   */
+  get pluginHtmlWebpack() {
+    return new HtmlWebpackPlugin({
+      appMountId: 'app',
+      filename: 'index.html',
+      hash: true,
+      inject: false,
+      lang: 'en',
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true
+      },
+      title: 'Generator React Webpack',
+      template: 'templates/index.ejs'
+    });
   }
 
   /**
@@ -74,7 +96,7 @@ class WebpackBaseConfig {
       devtool: 'eval',
       devServer: {
         contentBase: './src/',
-        publicPath: '/assets/',
+        publicPath: '/',
         historyApiFallback: true,
         hot: true,
         inline: true,
@@ -154,7 +176,7 @@ class WebpackBaseConfig {
           },
           {
             test: /\.(png|jpg|gif|mp4|ogg|svg|woff|woff2)$/,
-            loaders: ['file']
+            loaders: ['file?name=assets/[hash].[ext]']
           },
           {
             test: /\.json$/,
@@ -171,9 +193,9 @@ class WebpackBaseConfig {
         ]
       },
       output: {
-        path: path.resolve('./dist/assets'),
-        filename: 'app.js',
-        publicPath: './assets/'
+        path: path.resolve('./dist'),
+        filename: 'assets/app.js',
+        publicPath: '/'
       },
       plugins: [],
       resolve: {
