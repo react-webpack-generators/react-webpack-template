@@ -23,6 +23,9 @@ class WebpackDistConfig extends WebpackBaseConfig {
         new webpack.NoErrorsPlugin()
       ]
     };
+
+    // Deactivate hot-reloading if we run dist build on the dev server
+    this.config.devServer.hot = false;
   }
 
   /**
