@@ -19,15 +19,6 @@ class WebpackTestConfig extends WebpackBaseConfig {
         'react/lib/ReactContext': true,
       },
       module: {
-        preLoaders: [
-          {
-            test: /\.(js|jsx)$/,
-            loader: 'isparta-loader',
-            include: [
-              this.srcPathAbsolute
-            ]
-          }
-        ],
         loaders: [
           {
             test: /\.cssmodule\.css$/,
