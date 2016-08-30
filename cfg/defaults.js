@@ -51,6 +51,10 @@ function getDefaultModules() {
       {
         test: /\.(mp4|ogg|svg)$/,
         loader: 'file-loader'
+      },
+      {
+        test: /icons\\index\.(js|json)$/,
+        loader: 'style!css!fontgen'
       }
     ]
   };
