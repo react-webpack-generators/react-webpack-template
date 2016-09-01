@@ -3,6 +3,7 @@
 /**
  * Webpack configuration base class
  */
+const fs = require('fs');
 const path = require('path');
 const npmBase = path.join(__dirname, '../../node_modules');
 
@@ -17,7 +18,7 @@ class WebpackBaseConfig {
    * @return {Array} List of included packages
    */
   get includedPackages() {
-    return [].map((pkg) => path.join(npmBase, pkg));
+    return [].map((pkg) => fs.realpathSync(path.join(npmBase, pkg)));
   }
 
   /**
