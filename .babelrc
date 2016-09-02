@@ -10,7 +10,11 @@
   ],
   "env": {
     "test": {
-      "plugins": [ "istanbul" ]
+      "plugins": [
+        "transform-decorators-legacy",
+        "transform-object-rest-spread",
+        "istanbul"
+      ]
     }
   }
 }

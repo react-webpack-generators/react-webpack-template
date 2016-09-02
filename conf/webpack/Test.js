@@ -42,9 +42,6 @@ class WebpackTestConfig extends WebpackBaseConfig {
           {
             test: /\.(js|jsx)$/,
             loader: 'babel-loader',
-            query: {
-              presets: ['airbnb']
-            },
             include: [].concat(
               this.includedPackages,
               [

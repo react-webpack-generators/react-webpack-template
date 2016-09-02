@@ -50,7 +50,7 @@
     "babel-preset-react": "^6.5.0",
     "chai": "^3.5.0",
     "copyfiles": "^1.0.0",
-    "css-loader": "^0.23.1",
+    "css-loader": "^0.24.0",
     "enzyme": "^2.2.0",
     "eslint": "^3.0.0",
     "eslint-config-airbnb": "^10.0.0",
