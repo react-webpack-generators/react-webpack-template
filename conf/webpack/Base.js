@@ -3,6 +3,7 @@
 /**
  * Webpack configuration base class
  */
+const fs = require('fs');
 const path = require('path');
 const npmBase = path.join(__dirname, '../../node_modules');
 
