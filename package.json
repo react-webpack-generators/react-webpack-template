@@ -1,6 +1,6 @@
 {
   "name": "react-webpack-template",
-  "version": "1.7.2",
+  "version": "1.7.3",
   "description": "A base skeleton template for react and webpack without task runners",
   "main": "server.js",
   "scripts": {
