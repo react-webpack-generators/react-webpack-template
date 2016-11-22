@@ -1,6 +1,6 @@
 {
   "name": "react-webpack-template",
-  "version": "2.0.1-4",
+  "version": "2.0.1-5",
   "description": "React Webpack Starter Kit",
   "main": "src/exports.js",
   "scripts": {
