@@ -73,7 +73,6 @@
     "null-loader": "^0.1.1",
     "phantomjs-prebuilt": "^2.1.7",
     "react-addons-test-utils": "^15.0.1",
-    "react-hot-loader": "^3.0.0-beta.6",
     "rimraf": "^2.5.2",
     "sinon": "^1.17.3",
     "style-loader": "^0.13.1",
@@ -84,7 +83,8 @@
   "dependencies": {
     "cross-env": "^3.1.0",
     "react": "^15.0.1",
-    "react-dom": "^15.0.1"
+    "react-dom": "^15.0.1",
+    "react-hot-loader": "^3.0.0-beta.6"
   },
   "engines": {
     "node": ">= 4.0.0",
