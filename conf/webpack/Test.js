@@ -12,19 +12,29 @@ class WebpackTestConfig extends WebpackBaseConfig {
     super();
     this.config = {
       devtool: 'inline-source-map',
+      entry: [
+        './client.js'
+      ],
       externals: {
-        cheerio: 'window',
-        'react/lib/ExecutionEnvironment': true,
-        'react/addons': true,
-        'react/lib/ReactContext': true,
+        'cheerio': 'window',
+        'react/addons': 'true',
+        'react/lib/ExecutionEnvironment': 'true',
+        'react/lib/ReactContext': 'true'
       },
       module: {
         loaders: [
           {
             test: /\.cssmodule\.css$/,
             loaders: [
-              'style',
-              'css?modules&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]'
+              { loader: 'style-loader'},
+              {
+                loader: 'css-loader',
+                query: {
+                  modules: true,
+                  importLoaders: 1,
+                  localIdentName: '[name]-[local]-[hash:base64:5]'
+                }
+              }
             ]
           },
           {
@@ -37,7 +47,7 @@ class WebpackTestConfig extends WebpackBaseConfig {
           },
           {
             test: /\.json$/,
-            loader: 'json'
+            loader: 'json-loader'
           },
           {
             test: /\.(js|jsx)$/,

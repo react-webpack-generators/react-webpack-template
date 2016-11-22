@@ -69,9 +69,14 @@ class WebpackBaseConfig {
    * @return {Object}
    */
   get defaultSettings() {
+    const cssModulesQuery = {
+      modules: true,
+      importLoaders: 1,
+      localIdentName: '[name]-[local]-[hash:base64:5]'
+    };
+
     return {
       context: this.srcPathAbsolute,
-      debug: false,
       devtool: 'eval',
       devServer: {
         contentBase: './src/',
@@ -81,85 +86,56 @@ class WebpackBaseConfig {
         inline: true,
         port: 8000
       },
-      entry: './client.js',
+      entry: './index.js',
       module: {
-        preLoaders: [
+        rules: [
           {
-            test: /\.(js|jsx)$/,
+            enforce: 'pre',
+            test: /\.js?$/,
             include: this.srcPathAbsolute,
-            loader: 'eslint'
-          }
-        ],
-        loaders: [
-          {
-            test: /\.cssmodule\.css$/,
-            loaders: [
-              'style',
-              'css?modules&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]'
-            ]
+            loader: 'babel-loader',
+            query: {
+              presets: ['es2015']
+            }
           },
           {
             test: /^.((?!cssmodule).)*\.css$/,
             loaders: [
-              'style',
-              'css'
+              { loader: 'style-loader' },
+              { loader: 'css-loader' }
             ]
           },
           {
-            test: /\.cssmodule\.(sass|scss)$/,
-            loaders: [
-              'style',
-              'css?modules&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]',
-              'sass'
-            ]
+            test: /\.(png|jpg|gif|mp4|ogg|svg|woff|woff2)$/,
+            loader: 'file-loader'
           },
           {
             test: /^.((?!cssmodule).)*\.(sass|scss)$/,
             loaders: [
-              'style',
-              'css',
-              'sass'
-            ]
-          },
-          {
-            test: /\.cssmodule\.less$/,
-            loaders: [
-              'style',
-              'css?modules&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]',
-              'less'
+              { loader: 'style-loader' },
+              { loader: 'css-loader' },
+              { loader: 'sass-loader' }
             ]
           },
           {
             test: /^.((?!cssmodule).)*\.less$/,
             loaders: [
-              'style',
-              'css',
-              'less'
-            ]
-          },
-          {
-            test: /\.cssmodule\.styl$/,
-            loaders: [
-              'style',
-              'css?modules&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]',
-              'stylus'
+              { loader: 'style-loader' },
+              { loader: 'css-loader' },
+              { loader: 'less-loader' }
             ]
           },
           {
             test: /^.((?!cssmodule).)*\.styl$/,
             loaders: [
-              'style',
-              'css',
-              'stylus'
+              { loader: 'style-loader' },
+              { loader: 'css-loader' },
+              { loader: 'stylus-loader' }
             ]
           },
           {
-            test: /\.(png|jpg|gif|mp4|ogg|svg|woff|woff2)$/,
-            loaders: ['file']
-          },
-          {
             test: /\.json$/,
-            loaders: 'json'
+            loader: 'json-loader'
           },
           {
             test: /\.(js|jsx)$/,
@@ -167,7 +143,53 @@ class WebpackBaseConfig {
               this.includedPackages,
               [this.srcPathAbsolute]
             ),
-            loaders: ['react-hot', 'babel']
+            loaders: [
+              // Note: Moved this to .babelrc
+              { loader: 'babel-loader' }
+            ]
+          },
+          {
+            test: /\.cssmodule\.(sass|scss)$/,
+            loaders: [
+              { loader: 'style-loader'},
+              {
+                loader: 'css-loader',
+                query: cssModulesQuery
+              },
+              { loader: 'sass-loader' }
+            ]
+          },
+          {
+            test: /\.cssmodule\.css$/,
+            loaders: [
+              { loader: 'style-loader'},
+              {
+                loader: 'css-loader',
+                query: cssModulesQuery
+              }
+            ]
+          },
+          {
+            test: /\.cssmodule\.less$/,
+            loaders: [
+              { loader: 'style-loader'},
+              {
+                loader: 'css-loader',
+                query: cssModulesQuery
+              },
+              { loader: 'less-loader' }
+            ]
+          },
+          {
+            test: /\.cssmodule\.styl$/,
+            loaders: [
+              { loader: 'style-loader'},
+              {
+                loader: 'css-loader',
+                query: cssModulesQuery
+              },
+              { loader: 'stylus-loader' }
+            ]
           }
         ]
       },
@@ -187,7 +209,7 @@ class WebpackBaseConfig {
           stores: `${this.srcPathAbsolute}/stores/`,
           styles: `${this.srcPathAbsolute}/styles/`
         },
-        extensions: ['', '.js', '.jsx'],
+        extensions: ['.js', '.jsx'],
         modules: [
           this.srcPathAbsolute,
           'node_modules'
