@@ -1,10 +1,11 @@
-'use strict';
+'use strict';  // eslint-disable-line
 
 /**
  * Webpack configuration base class
  */
 const fs = require('fs');
 const path = require('path');
+
 const npmBase = path.join(__dirname, '../../node_modules');
 
 class WebpackBaseConfig {
@@ -34,7 +35,7 @@ class WebpackBaseConfig {
 
   /**
    * Get the global config
-   * @param {Object} config Final webpack config
+   * @return {Object} config Final webpack config
    */
   get config() {
     return this._config;
@@ -151,7 +152,7 @@ class WebpackBaseConfig {
           {
             test: /\.cssmodule\.(sass|scss)$/,
             loaders: [
-              { loader: 'style-loader'},
+              { loader: 'style-loader' },
               {
                 loader: 'css-loader',
                 query: cssModulesQuery
@@ -162,7 +163,7 @@ class WebpackBaseConfig {
           {
             test: /\.cssmodule\.css$/,
             loaders: [
-              { loader: 'style-loader'},
+              { loader: 'style-loader' },
               {
                 loader: 'css-loader',
                 query: cssModulesQuery
@@ -172,7 +173,7 @@ class WebpackBaseConfig {
           {
             test: /\.cssmodule\.less$/,
             loaders: [
-              { loader: 'style-loader'},
+              { loader: 'style-loader' },
               {
                 loader: 'css-loader',
                 query: cssModulesQuery
@@ -183,7 +184,7 @@ class WebpackBaseConfig {
           {
             test: /\.cssmodule\.styl$/,
             loaders: [
-              { loader: 'style-loader'},
+              { loader: 'style-loader' },
               {
                 loader: 'css-loader',
                 query: cssModulesQuery
