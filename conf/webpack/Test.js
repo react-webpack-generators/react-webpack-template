@@ -1,4 +1,4 @@
-'use strict';
+'use strict';  // eslint-disable-line
 
 /**
  * Default test configuration.
@@ -10,13 +10,20 @@ class WebpackTestConfig extends WebpackBaseConfig {
 
   constructor() {
     super();
+
+    const cssModulesQuery = {
+      modules: true,
+      importLoaders: 1,
+      localIdentName: '[name]-[local]-[hash:base64:5]'
+    };
+
     this.config = {
       devtool: 'inline-source-map',
       entry: [
         './client.js'
       ],
       externals: {
-        'cheerio': 'window',
+        cheerio: 'window',
         'react/addons': 'true',
         'react/lib/ExecutionEnvironment': 'true',
         'react/lib/ReactContext': 'true'
@@ -26,15 +33,44 @@ class WebpackTestConfig extends WebpackBaseConfig {
           {
             test: /\.cssmodule\.css$/,
             loaders: [
-              { loader: 'style-loader'},
+              { loader: 'style-loader' },
               {
                 loader: 'css-loader',
-                query: {
-                  modules: true,
-                  importLoaders: 1,
-                  localIdentName: '[name]-[local]-[hash:base64:5]'
-                }
+                query: cssModulesQuery
               }
+            ]
+          },
+          {
+            test: /\.cssmodule\.less$/,
+            loaders: [
+              { loader: 'style-loader' },
+              {
+                loader: 'css-loader',
+                query: cssModulesQuery
+              },
+              { loader: 'less-loader' }
+            ]
+          },
+          {
+            test: /\.cssmodule\.styl$/,
+            loaders: [
+              { loader: 'style-loader' },
+              {
+                loader: 'css-loader',
+                query: cssModulesQuery
+              },
+              { loader: 'stylus-loader' }
+            ]
+          },
+          {
+            test: /\.cssmodule\.(sass|scss)$/,
+            loaders: [
+              { loader: 'style-loader' },
+              {
+                loader: 'css-loader',
+                query: cssModulesQuery
+              },
+              { loader: 'sass-loader' }
             ]
           },
           {
@@ -42,7 +78,19 @@ class WebpackTestConfig extends WebpackBaseConfig {
             loader: 'null-loader'
           },
           {
-            test: /\.(sass|scss|less|styl|png|jpg|gif|mp4|ogg|svg|woff|woff2)$/,
+            test: /^.((?!cssmodule).)*\.(sass|scss)$/,
+            loader: 'null-loader'
+          },
+          {
+            test: /^.((?!cssmodule).)*\.less$/,
+            loader: 'null-loader'
+          },
+          {
+            test: /^.((?!cssmodule).)*\.styl$/,
+            loader: 'null-loader'
+          },
+          {
+            test: /\.(png|jpg|gif|mp4|ogg|svg|woff|woff2)$/,
             loader: 'null-loader'
           },
           {
