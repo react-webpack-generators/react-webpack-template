@@ -37,7 +37,8 @@ class WebpackTestConfig extends WebpackBaseConfig {
               {
                 loader: 'css-loader',
                 query: cssModulesQuery
-              }
+              },
+              { loader: 'postcss-loader' }
             ]
           },
           {
@@ -48,6 +49,7 @@ class WebpackTestConfig extends WebpackBaseConfig {
                 loader: 'css-loader',
                 query: cssModulesQuery
               },
+              { loader: 'postcss-loader' },
               { loader: 'less-loader' }
             ]
           },
@@ -59,6 +61,7 @@ class WebpackTestConfig extends WebpackBaseConfig {
                 loader: 'css-loader',
                 query: cssModulesQuery
               },
+              { loader: 'postcss-loader' },
               { loader: 'stylus-loader' }
             ]
           },
@@ -70,6 +73,7 @@ class WebpackTestConfig extends WebpackBaseConfig {
                 loader: 'css-loader',
                 query: cssModulesQuery
               },
+              { loader: 'postcss-loader' },
               { loader: 'sass-loader' }
             ]
           },
