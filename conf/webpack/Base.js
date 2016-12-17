@@ -100,21 +100,29 @@ class WebpackBaseConfig {
             }
           },
           {
+            test: /\.(png|jpg|gif|mp4|ogg|svg|woff|woff2)$/,
+            loader: 'file-loader'
+          },
+          {
             test: /^.((?!cssmodule).)*\.css$/,
             loaders: [
               { loader: 'style-loader' },
-              { loader: 'css-loader' }
+              {
+                loader: 'css-loader',
+                query: { importLoaders: 1 }
+              },
+              { loader: 'postcss-loader' }
             ]
-          },
-          {
-            test: /\.(png|jpg|gif|mp4|ogg|svg|woff|woff2)$/,
-            loader: 'file-loader'
           },
           {
             test: /^.((?!cssmodule).)*\.(sass|scss)$/,
             loaders: [
               { loader: 'style-loader' },
-              { loader: 'css-loader' },
+              {
+                loader: 'css-loader',
+                query: { importLoaders: 1 }
+              },
+              { loader: 'postcss-loader' },
               { loader: 'sass-loader' }
             ]
           },
@@ -122,7 +130,11 @@ class WebpackBaseConfig {
             test: /^.((?!cssmodule).)*\.less$/,
             loaders: [
               { loader: 'style-loader' },
-              { loader: 'css-loader' },
+              {
+                loader: 'css-loader',
+                query: { importLoaders: 1 }
+              },
+              { loader: 'postcss-loader' },
               { loader: 'less-loader' }
             ]
           },
@@ -130,7 +142,58 @@ class WebpackBaseConfig {
             test: /^.((?!cssmodule).)*\.styl$/,
             loaders: [
               { loader: 'style-loader' },
-              { loader: 'css-loader' },
+              {
+                loader: 'css-loader',
+                query: { importLoaders: 1 }
+              },
+              { loader: 'postcss-loader' },
+              { loader: 'stylus-loader' }
+            ]
+          },
+          {
+            test: /\.cssmodule\.(sass|scss)$/,
+            loaders: [
+              { loader: 'style-loader' },
+              {
+                loader: 'css-loader',
+                query: cssModulesQuery
+              },
+              { loader: 'postcss-loader' },
+              { loader: 'sass-loader' }
+            ]
+          },
+          {
+            test: /\.cssmodule\.css$/,
+            loaders: [
+              { loader: 'style-loader' },
+              {
+                loader: 'css-loader',
+                query: cssModulesQuery
+              },
+              { loader: 'postcss-loader' }
+            ]
+          },
+          {
+            test: /\.cssmodule\.less$/,
+            loaders: [
+              { loader: 'style-loader' },
+              {
+                loader: 'css-loader',
+                query: cssModulesQuery
+              },
+              { loader: 'postcss-loader' },
+              { loader: 'less-loader' }
+            ]
+          },
+          {
+            test: /\.cssmodule\.styl$/,
+            loaders: [
+              { loader: 'style-loader' },
+              {
+                loader: 'css-loader',
+                query: cssModulesQuery
+              },
+              { loader: 'postcss-loader' },
               { loader: 'stylus-loader' }
             ]
           },
@@ -147,49 +210,6 @@ class WebpackBaseConfig {
             loaders: [
               // Note: Moved this to .babelrc
               { loader: 'babel-loader' }
-            ]
-          },
-          {
-            test: /\.cssmodule\.(sass|scss)$/,
-            loaders: [
-              { loader: 'style-loader' },
-              {
-                loader: 'css-loader',
-                query: cssModulesQuery
-              },
-              { loader: 'sass-loader' }
-            ]
-          },
-          {
-            test: /\.cssmodule\.css$/,
-            loaders: [
-              { loader: 'style-loader' },
-              {
-                loader: 'css-loader',
-                query: cssModulesQuery
-              }
-            ]
-          },
-          {
-            test: /\.cssmodule\.less$/,
-            loaders: [
-              { loader: 'style-loader' },
-              {
-                loader: 'css-loader',
-                query: cssModulesQuery
-              },
-              { loader: 'less-loader' }
-            ]
-          },
-          {
-            test: /\.cssmodule\.styl$/,
-            loaders: [
-              { loader: 'style-loader' },
-              {
-                loader: 'css-loader',
-                query: cssModulesQuery
-              },
-              { loader: 'stylus-loader' }
             ]
           }
         ]
