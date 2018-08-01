@@ -15,7 +15,10 @@ module.exports = {
       {
         enforce: 'pre',
         test: /\.(js|jsx)$/,
-        loader: 'isparta-instrumenter-loader',
+        loader: 'istanbul-instrumenter-loader',
+        query: {
+          esModules: true
+        },
         include: [
           path.join(__dirname, '/../src')
         ]
