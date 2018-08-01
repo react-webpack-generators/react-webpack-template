@@ -51,7 +51,6 @@
     "eslint-plugin-react": "^6.0.0",
     "file-loader": "^1.1.11",
     "glob": "^7.0.0",
-    "isparta-loader": "^2.0.0",
     "istanbul-instrumenter-loader": "^3.0.1",
     "karma": "^1.0.0",
     "karma-chai": "^0.1.0",
