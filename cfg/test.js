@@ -6,21 +6,23 @@ let srcPath = path.join(__dirname, '/../src/');
 let baseConfig = require('./base');
 
 // Add needed plugins here
-let BowerWebpackPlugin = require('bower-webpack-plugin');
 
 module.exports = {
   devtool: 'eval',
+  mode: 'development',
   module: {
-    preLoaders: [
+    rules: [
       {
+        enforce: 'pre',
         test: /\.(js|jsx)$/,
-        loader: 'isparta-instrumenter-loader',
+        loader: 'istanbul-instrumenter-loader',
+        query: {
+          esModules: true
+        },
         include: [
           path.join(__dirname, '/../src')
         ]
-      }
-    ],
-    loaders: [
+      },
       {
         test: /\.(png|jpg|gif|woff|woff2|css|sass|scss|less|styl)$/,
         loader: 'null-loader'
@@ -29,7 +31,7 @@ module.exports = {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
         include: [].concat(
-          baseConfig.additionalPaths,
+          baseConfig.extras.additionalPaths,
           [
             path.join(__dirname, '/../src'),
             path.join(__dirname, '/../test')
@@ -39,7 +41,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [ '', '.js', '.jsx' ],
+    extensions: [ '.js', '.jsx' ],
     alias: {
       actions: srcPath + 'actions/',
       helpers: path.join(__dirname, '/../test/helpers'),
@@ -50,9 +52,5 @@ module.exports = {
       config: srcPath + 'config/' + process.env.REACT_WEBPACK_ENV
     }
   },
-  plugins: [
-    new BowerWebpackPlugin({
-      searchResolveModulesDirectories: false
-    })
-  ]
+  plugins: []
 };

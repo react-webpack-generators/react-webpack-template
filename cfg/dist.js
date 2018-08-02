@@ -7,34 +7,29 @@ let baseConfig = require('./base');
 let defaultSettings = require('./defaults');
 
 // Add needed plugins here
-let BowerWebpackPlugin = require('bower-webpack-plugin');
 
-let config = Object.assign({}, baseConfig, {
+let config = Object.assign({}, baseConfig.pureConfig, {
+  mode: 'production',
   entry: path.join(__dirname, '../src/index'),
   cache: false,
   devtool: 'sourcemap',
   plugins: [
-    new webpack.optimize.DedupePlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': '"production"'
     }),
-    new BowerWebpackPlugin({
-      searchResolveModulesDirectories: false
-    }),
-    new webpack.optimize.UglifyJsPlugin(),
-    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
   ],
   module: defaultSettings.getDefaultModules()
 });
 
-// Add needed loaders to the defaults here
-config.module.loaders.push({
+// Add needed rules (loaders in Webpack 1.x) to the defaults here
+config.module.rules.push({
   test: /\.(js|jsx)$/,
-  loader: 'babel',
+  loader: 'babel-loader',
   include: [].concat(
-    config.additionalPaths,
+    baseConfig.extras.additionalPaths,
     [ path.join(__dirname, '/../src') ]
   )
 });
